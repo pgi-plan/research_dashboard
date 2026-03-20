@@ -1,0 +1,822 @@
+"Subject.Area","Subcategory","Scholarly.Output","Scholarly.Output..growth...","Citations","Authors","Authors..growth...","Citations.per.Publication","Field.weighted.Citation.Impact","Year"
+"Medicine","-",118,-100,20,240,0,0.2,1.24,2026
+"Agricultural and Biological Sciences","-",72,-100,5,164,0,0.1,0.8,2026
+"Environmental Science","-",57,-100,8,115,0,0.1,0.73,2026
+"Biochemistry, Genetics and Molecular Biology","-",52,-100,7,158,0,0.1,1.03,2026
+"Chemistry","-",51,-100,6,125,0,0.1,0.5,2026
+"Physics and Astronomy","-",51,-100,4,105,0,0.1,0.51,2026
+"Engineering","-",49,-100,3,126,0,0.1,0.21,2026
+"Computer Science","-",47,-100,1,75,0,0,0.12,2026
+"Mathematics","-",46,-100,0,91,0,0,0,2026
+"Materials Science","-",39,-100,4,95,0,0.1,0.43,2026
+"Earth and Planetary Sciences","-",37,-100,1,67,0,0,0.22,2026
+"Social Sciences","-",37,-100,15,63,0,0.4,1.49,2026
+"Chemical Engineering","-",30,-100,9,76,0,0.3,1.23,2026
+"Economics, Econometrics and Finance","-",22,-100,5,32,0,0.2,0.69,2026
+"Dentistry","-",21,-100,7,57,0,0.3,2.63,2026
+"Business, Management and Accounting","-",19,-100,1,27,0,0.1,0.36,2026
+"Arts and Humanities","-",17,-100,1,15,0,0.1,1.45,2026
+"Nursing","-",17,-100,1,52,0,0.1,0.53,2026
+"Neuroscience","-",16,-100,5,29,0,0.3,2,2026
+"Pharmacology, Toxicology and Pharmaceutics","-",16,-100,0,50,0,0,0,2026
+"Immunology and Microbiology","-",14,-100,0,34,0,0,0,2026
+"Veterinary","-",14,-100,2,50,0,0.1,1.89,2026
+"Energy","-",13,-100,0,31,0,0,0,2026
+"Decision Sciences","-",10,-100,0,28,0,0,0,2026
+"Multidisciplinary","-",8,-100,0,16,0,0,0,2026
+"Psychology","-",7,-100,0,20,0,0,0,2026
+"Health Professions","-",2,-100,0,2,0,0,0,2026
+"Medicine","-",569,-100,565,916,0,1,0.76,2025
+"Social Sciences","-",340,-100,259,461,0,0.8,0.57,2025
+"Engineering","-",339,-100,401,543,0,1.2,0.79,2025
+"Agricultural and Biological Sciences","-",317,-100,425,575,0,1.3,0.8,2025
+"Computer Science","-",309,-100,241,455,0,0.8,0.68,2025
+"Physics and Astronomy","-",262,-100,406,320,0,1.5,0.72,2025
+"Chemistry","-",247,-100,385,493,0,1.6,0.62,2025
+"Biochemistry, Genetics and Molecular Biology","-",230,-100,448,556,0,1.9,0.88,2025
+"Environmental Science","-",202,-100,310,349,0,1.5,0.91,2025
+"Materials Science","-",195,-100,329,333,0,1.7,0.69,2025
+"Mathematics","-",188,-100,154,250,0,0.8,0.81,2025
+"Earth and Planetary Sciences","-",174,-100,299,281,0,1.7,1.01,2025
+"Chemical Engineering","-",140,-100,240,320,0,1.7,0.63,2025
+"Arts and Humanities","-",138,-100,36,182,0,0.3,0.52,2025
+"Energy","-",111,-100,164,191,0,1.5,0.69,2025
+"Business, Management and Accounting","-",110,-100,89,190,0,0.8,0.48,2025
+"Immunology and Microbiology","-",109,-100,147,303,0,1.3,0.9,2025
+"Pharmacology, Toxicology and Pharmaceutics","-",88,-100,128,250,0,1.5,0.76,2025
+"Nursing","-",85,-100,62,179,0,0.7,0.46,2025
+"Dentistry","-",77,-100,121,132,0,1.6,1.1,2025
+"Economics, Econometrics and Finance","-",71,-100,116,124,0,1.6,0.88,2025
+"Veterinary","-",69,-100,49,180,0,0.7,0.76,2025
+"Decision Sciences","-",60,-100,42,98,0,0.7,0.41,2025
+"Neuroscience","-",60,-100,151,134,0,2.5,1.25,2025
+"Multidisciplinary","-",52,-100,48,153,0,0.9,0.42,2025
+"Psychology","-",41,-100,20,68,0,0.5,0.46,2025
+"Health Professions","-",33,-100,64,57,0,1.9,1.68,2025
+"Medicine","-",477,0,1481,777,0,3.1,0.78,2024
+"Engineering","-",334,0,1563,532,0,4.7,0.86,2024
+"Social Sciences","-",323,0,677,419,0,2.1,0.54,2024
+"Computer Science","-",315,0,1132,425,0,3.6,0.91,2024
+"Agricultural and Biological Sciences","-",300,0,1437,497,0,4.8,0.87,2024
+"Physics and Astronomy","-",253,0,1184,304,0,4.7,0.81,2024
+"Chemistry","-",210,0,976,414,0,4.6,0.63,2024
+"Environmental Science","-",197,0,1006,349,0,5.1,0.87,2024
+"Biochemistry, Genetics and Molecular Biology","-",191,0,840,467,0,4.4,0.69,2024
+"Mathematics","-",172,0,515,227,0,3,0.73,2024
+"Materials Science","-",161,0,829,251,0,5.1,0.72,2024
+"Earth and Planetary Sciences","-",153,0,603,242,0,3.9,0.92,2024
+"Arts and Humanities","-",134,0,86,146,0,0.6,0.4,2024
+"Chemical Engineering","-",120,0,594,277,0,5,0.6,2024
+"Immunology and Microbiology","-",107,0,430,190,0,4,0.82,2024
+"Nursing","-",95,0,198,212,0,2.1,0.5,2024
+"Multidisciplinary","-",87,0,329,93,0,3.8,1.58,2024
+"Energy","-",84,0,478,157,0,5.7,0.82,2024
+"Business, Management and Accounting","-",81,0,284,111,0,3.5,0.66,2024
+"Pharmacology, Toxicology and Pharmaceutics","-",77,0,329,176,0,4.3,0.81,2024
+"Decision Sciences","-",75,0,233,124,0,3.1,0.9,2024
+"Veterinary","-",65,0,169,178,0,2.6,0.94,2024
+"Dentistry","-",62,0,221,124,0,3.6,0.92,2024
+"Economics, Econometrics and Finance","-",48,0,227,62,0,4.7,0.76,2024
+"Neuroscience","-",37,0,166,61,0,4.5,0.74,2024
+"Health Professions","-",29,0,80,60,0,2.8,0.63,2024
+"Psychology","-",27,0,32,58,0,1.2,0.31,2024
+"Medicine","-",522,0,3275,790,0,6.3,0.83,2023
+"Computer Science","-",354,0,1896,442,0,5.4,0.81,2023
+"Social Sciences","-",345,0,875,456,0,2.5,0.45,2023
+"Engineering","-",329,0,2651,543,0,8.1,0.8,2023
+"Agricultural and Biological Sciences","-",271,0,2400,457,0,8.9,0.86,2023
+"Physics and Astronomy","-",239,0,1821,280,0,7.6,0.96,2023
+"Mathematics","-",221,0,1043,270,0,4.7,0.89,2023
+"Environmental Science","-",189,0,1580,342,0,8.4,0.84,2023
+"Chemistry","-",179,0,1403,304,0,7.8,0.7,2023
+"Biochemistry, Genetics and Molecular Biology","-",175,0,1244,388,0,7.1,0.66,2023
+"Materials Science","-",173,0,1405,277,0,8.1,0.7,2023
+"Arts and Humanities","-",157,0,169,172,0,1.1,0.42,2023
+"Earth and Planetary Sciences","-",147,0,866,244,0,5.9,0.87,2023
+"Immunology and Microbiology","-",117,0,596,243,0,5.1,0.6,2023
+"Business, Management and Accounting","-",99,0,526,133,0,5.3,0.77,2023
+"Chemical Engineering","-",99,0,896,189,0,9.1,0.89,2023
+"Energy","-",94,0,704,212,0,7.5,0.62,2023
+"Pharmacology, Toxicology and Pharmaceutics","-",92,0,585,210,0,6.4,0.59,2023
+"Nursing","-",91,0,322,160,0,3.5,0.42,2023
+"Dentistry","-",69,0,608,143,0,8.8,1.25,2023
+"Economics, Econometrics and Finance","-",67,0,167,62,0,2.5,0.76,2023
+"Veterinary","-",66,0,191,176,0,2.9,0.63,2023
+"Decision Sciences","-",64,0,306,105,0,4.8,0.48,2023
+"Multidisciplinary","-",51,0,843,99,0,16.5,1.32,2023
+"Neuroscience","-",46,0,300,107,0,6.5,0.61,2023
+"Psychology","-",29,0,131,46,0,4.5,0.53,2023
+"Health Professions","-",26,0,127,53,0,4.9,0.43,2023
+"Medicine","-",521,0,5283,840,0,10.1,0.89,2022
+"Engineering","-",325,0,3312,479,0,10.2,0.77,2022
+"Computer Science","-",322,0,2720,444,0,8.4,0.74,2022
+"Social Sciences","-",307,0,1437,415,0,4.7,0.54,2022
+"Agricultural and Biological Sciences","-",255,0,3482,415,0,13.7,1.05,2022
+"Physics and Astronomy","-",240,0,2541,319,0,10.6,0.83,2022
+"Mathematics","-",228,0,1279,263,0,5.6,0.64,2022
+"Chemistry","-",200,0,2189,376,0,10.9,0.61,2022
+"Environmental Science","-",190,0,2938,334,0,15.5,1.06,2022
+"Biochemistry, Genetics and Molecular Biology","-",189,0,2775,429,0,14.7,0.84,2022
+"Materials Science","-",157,0,1764,258,0,11.2,0.69,2022
+"Arts and Humanities","-",152,0,224,153,0,1.5,0.5,2022
+"Earth and Planetary Sciences","-",145,0,1476,225,0,10.2,1.18,2022
+"Immunology and Microbiology","-",110,0,1472,228,0,13.4,1.02,2022
+"Business, Management and Accounting","-",105,0,722,154,0,6.9,0.61,2022
+"Nursing","-",100,0,677,205,0,6.8,0.56,2022
+"Chemical Engineering","-",93,0,1161,213,0,12.5,0.69,2022
+"Decision Sciences","-",88,0,588,130,0,6.7,0.59,2022
+"Pharmacology, Toxicology and Pharmaceutics","-",87,0,864,205,0,9.9,0.74,2022
+"Multidisciplinary","-",77,0,324,90,0,4.2,0.96,2022
+"Dentistry","-",74,0,779,159,0,10.5,1.12,2022
+"Economics, Econometrics and Finance","-",72,0,350,100,0,4.9,0.69,2022
+"Energy","-",67,0,1094,116,0,16.3,1.17,2022
+"Veterinary","-",64,0,373,170,0,5.8,0.74,2022
+"Neuroscience","-",49,0,478,142,0,9.8,0.76,2022
+"Psychology","-",42,0,187,62,0,4.5,0.4,2022
+"Health Professions","-",23,0,220,49,0,9.6,1.67,2022
+"Medicine","-",660,0,9243,956,0,14,1.01,2021
+"Social Sciences","-",355,0,2344,471,0,6.6,0.6,2021
+"Engineering","-",320,0,5142,463,0,16.1,1.07,2021
+"Computer Science","-",319,0,4510,384,0,14.1,1.3,2021
+"Agricultural and Biological Sciences","-",300,0,5492,496,0,18.3,1.09,2021
+"Physics and Astronomy","-",279,0,4308,343,0,15.4,0.93,2021
+"Environmental Science","-",255,0,5738,418,0,22.5,1.12,2021
+"Biochemistry, Genetics and Molecular Biology","-",227,0,4451,415,0,19.6,0.99,2021
+"Mathematics","-",226,0,1680,264,0,7.4,0.8,2021
+"Chemistry","-",203,0,3626,362,0,17.9,0.72,2021
+"Materials Science","-",187,0,3369,308,0,18,0.81,2021
+"Earth and Planetary Sciences","-",175,0,2966,284,0,16.9,1.12,2021
+"Arts and Humanities","-",169,0,592,234,0,3.5,0.74,2021
+"Nursing","-",111,0,831,245,0,7.5,0.57,2021
+"Immunology and Microbiology","-",110,0,2298,227,0,20.9,1.06,2021
+"Pharmacology, Toxicology and Pharmaceutics","-",96,0,2134,216,0,22.2,1.15,2021
+"Dentistry","-",93,0,1301,177,0,14,1.45,2021
+"Business, Management and Accounting","-",92,0,1484,129,0,16.1,0.85,2021
+"Chemical Engineering","-",92,0,2275,154,0,24.7,1.04,2021
+"Decision Sciences","-",84,0,732,128,0,8.7,0.76,2021
+"Neuroscience","-",80,0,1596,120,0,20,1.3,2021
+"Energy","-",79,0,1358,115,0,17.2,0.82,2021
+"Veterinary","-",77,0,557,167,0,7.2,0.78,2021
+"Economics, Econometrics and Finance","-",49,0,618,61,0,12.6,0.96,2021
+"Multidisciplinary","-",45,0,924,88,0,20.5,0.77,2021
+"Health Professions","-",33,0,224,85,0,6.8,0.76,2021
+"Psychology","-",31,0,524,64,0,16.9,1.06,2021
+"Medicine","-",498,0,6991,917,0,14,0.89,2020
+"Engineering","-",318,0,4617,495,0,14.5,0.87,2020
+"Social Sciences","-",312,0,1938,434,0,6.2,0.61,2020
+"Computer Science","-",307,0,3212,421,0,10.5,0.64,2020
+"Agricultural and Biological Sciences","-",276,0,7173,478,0,26,1.28,2020
+"Physics and Astronomy","-",273,0,5166,362,0,18.9,0.94,2020
+"Environmental Science","-",212,0,4749,358,0,22.4,1,2020
+"Mathematics","-",205,0,2300,225,0,11.2,0.92,2020
+"Chemistry","-",195,0,3998,371,0,20.5,0.76,2020
+"Biochemistry, Genetics and Molecular Biology","-",190,0,4142,448,0,21.8,0.85,2020
+"Materials Science","-",181,0,3043,274,0,16.8,0.78,2020
+"Earth and Planetary Sciences","-",139,0,2635,210,0,19,1,2020
+"Arts and Humanities","-",133,0,370,163,0,2.8,0.58,2020
+"Immunology and Microbiology","-",103,0,2165,259,0,21,0.75,2020
+"Chemical Engineering","-",100,0,2483,166,0,24.8,0.92,2020
+"Business, Management and Accounting","-",99,0,1631,149,0,16.5,0.71,2020
+"Nursing","-",92,0,878,201,0,9.5,0.58,2020
+"Energy","-",86,0,1852,167,0,21.5,0.92,2020
+"Decision Sciences","-",83,0,847,146,0,10.2,0.66,2020
+"Pharmacology, Toxicology and Pharmaceutics","-",79,0,1174,226,0,14.9,0.65,2020
+"Dentistry","-",77,0,1661,123,0,21.6,1.56,2020
+"Veterinary","-",76,0,877,201,0,11.5,0.82,2020
+"Economics, Econometrics and Finance","-",57,0,435,82,0,7.6,0.56,2020
+"Neuroscience","-",46,0,1366,86,0,29.7,1.76,2020
+"Multidisciplinary","-",43,0,1596,106,0,37.1,1.08,2020
+"Psychology","-",30,0,83,63,0,2.8,0.18,2020
+"Health Professions","-",23,0,442,54,0,19.2,1.76,2020
+"Medicine","-",422,0,5950,741,0,14.1,0.8,2019
+"Computer Science","-",269,0,3526,392,0,13.1,0.76,2019
+"Engineering","-",266,0,4155,441,0,15.6,0.68,2019
+"Social Sciences","-",261,0,1881,355,0,7.2,0.57,2019
+"Agricultural and Biological Sciences","-",260,0,7047,395,0,27.1,1.2,2019
+"Physics and Astronomy","-",227,0,3884,285,0,17.1,0.81,2019
+"Mathematics","-",199,0,1667,240,0,8.4,0.68,2019
+"Materials Science","-",187,0,3627,271,0,19.4,0.81,2019
+"Chemistry","-",166,0,4283,293,0,25.8,0.92,2019
+"Environmental Science","-",156,0,4722,270,0,30.3,1.2,2019
+"Biochemistry, Genetics and Molecular Biology","-",141,0,3569,325,0,25.3,0.85,2019
+"Earth and Planetary Sciences","-",136,0,2830,208,0,20.8,1.02,2019
+"Arts and Humanities","-",121,0,480,134,0,4,0.61,2019
+"Immunology and Microbiology","-",93,0,1862,184,0,20,0.73,2019
+"Energy","-",83,0,1729,133,0,20.8,0.94,2019
+"Veterinary","-",81,0,494,151,0,6.1,0.53,2019
+"Dentistry","-",77,0,1818,148,0,23.6,1.47,2019
+"Chemical Engineering","-",70,0,2569,123,0,36.7,1.12,2019
+"Business, Management and Accounting","-",69,0,2070,118,0,30,1.03,2019
+"Decision Sciences","-",66,0,917,95,0,13.9,1,2019
+"Nursing","-",65,0,616,122,0,9.5,0.51,2019
+"Pharmacology, Toxicology and Pharmaceutics","-",54,0,811,151,0,15,0.67,2019
+"Neuroscience","-",39,0,821,77,0,21.1,0.75,2019
+"Multidisciplinary","-",36,0,1091,68,0,30.3,0.85,2019
+"Economics, Econometrics and Finance","-",35,0,439,40,0,12.5,0.86,2019
+"Psychology","-",27,0,197,36,0,7.3,0.38,2019
+"Health Professions","-",15,0,106,42,0,7.1,0.32,2019
+"Medicine","-",439,0,8074,792,0,18.4,0.85,2018
+"Engineering","-",298,0,4911,469,0,16.5,0.74,2018
+"Social Sciences","-",275,0,2035,376,0,7.4,0.54,2018
+"Physics and Astronomy","-",229,0,4893,287,0,21.4,0.96,2018
+"Computer Science","-",226,0,3287,298,0,14.5,0.9,2018
+"Agricultural and Biological Sciences","-",225,0,6659,326,0,29.6,1.37,2018
+"Mathematics","-",182,0,1817,198,0,10,0.74,2018
+"Materials Science","-",156,0,2473,239,0,15.9,0.72,2018
+"Chemistry","-",150,0,3850,259,0,25.7,1,2018
+"Biochemistry, Genetics and Molecular Biology","-",139,0,3533,317,0,25.4,0.86,2018
+"Environmental Science","-",139,0,5274,234,0,37.9,1.21,2018
+"Arts and Humanities","-",118,0,595,151,0,5,0.7,2018
+"Earth and Planetary Sciences","-",113,0,2614,205,0,23.1,0.97,2018
+"Energy","-",112,0,3440,189,0,30.7,0.86,2018
+"Dentistry","-",98,0,1841,181,0,18.8,1.12,2018
+"Veterinary","-",82,0,919,144,0,11.2,0.86,2018
+"Nursing","-",80,0,1572,186,0,19.7,0.81,2018
+"Immunology and Microbiology","-",72,0,1032,150,0,14.3,0.63,2018
+"Pharmacology, Toxicology and Pharmaceutics","-",64,0,1402,134,0,21.9,0.92,2018
+"Chemical Engineering","-",58,0,2250,119,0,38.8,1.07,2018
+"Business, Management and Accounting","-",50,0,2198,81,0,44,1.05,2018
+"Neuroscience","-",47,0,1083,90,0,23,0.9,2018
+"Multidisciplinary","-",42,0,1240,91,0,29.5,0.74,2018
+"Economics, Econometrics and Finance","-",40,0,690,55,0,17.3,0.88,2018
+"Psychology","-",37,0,313,53,0,8.5,0.46,2018
+"Decision Sciences","-",34,0,905,54,0,26.6,1.18,2018
+"Health Professions","-",21,0,196,34,0,9.3,0.61,2018
+"Medicine","-",373,0,7186,637,0,19.3,0.91,2017
+"Physics and Astronomy","-",271,0,8279,284,0,30.5,1.08,2017
+"Engineering","-",260,0,4279,345,0,16.5,0.86,2017
+"Agricultural and Biological Sciences","-",196,0,5239,302,0,26.7,1.08,2017
+"Computer Science","-",189,0,3306,232,0,17.5,0.93,2017
+"Social Sciences","-",184,0,1152,244,0,6.3,0.45,2017
+"Materials Science","-",178,0,2680,216,0,15.1,0.75,2017
+"Mathematics","-",163,0,2321,194,0,14.2,0.89,2017
+"Chemistry","-",156,0,3652,265,0,23.4,0.68,2017
+"Biochemistry, Genetics and Molecular Biology","-",119,0,3841,252,0,32.3,0.98,2017
+"Environmental Science","-",107,0,3508,190,0,32.8,0.99,2017
+"Earth and Planetary Sciences","-",94,0,5541,160,0,58.9,1.88,2017
+"Arts and Humanities","-",89,0,427,117,0,4.8,0.41,2017
+"Veterinary","-",89,0,1034,180,0,11.6,0.75,2017
+"Dentistry","-",88,0,2512,160,0,28.5,1.4,2017
+"Business, Management and Accounting","-",78,0,1456,107,0,18.7,0.69,2017
+"Energy","-",77,0,2593,137,0,33.7,1.03,2017
+"Nursing","-",73,0,958,177,0,13.1,0.75,2017
+"Immunology and Microbiology","-",69,0,1605,138,0,23.3,0.86,2017
+"Chemical Engineering","-",67,0,1459,114,0,21.8,0.72,2017
+"Decision Sciences","-",66,0,1324,101,0,20.1,0.86,2017
+"Pharmacology, Toxicology and Pharmaceutics","-",61,0,1668,127,0,27.3,0.89,2017
+"Neuroscience","-",43,0,889,96,0,20.7,0.81,2017
+"Multidisciplinary","-",37,0,1836,154,0,49.6,2.02,2017
+"Economics, Econometrics and Finance","-",31,0,299,27,0,9.6,0.74,2017
+"Psychology","-",23,0,392,36,0,17,0.86,2017
+"Health Professions","-",17,0,136,42,0,8,0.69,2017
+"Medicine","-",413,0,8036,724,0,19.5,0.91,2016
+"Physics and Astronomy","-",249,0,4239,280,0,17,0.83,2016
+"Engineering","-",204,0,2941,309,0,14.4,1.04,2016
+"Agricultural and Biological Sciences","-",182,0,5370,310,0,29.5,1.1,2016
+"Computer Science","-",176,0,1966,226,0,11.2,0.65,2016
+"Materials Science","-",163,0,2442,207,0,15,0.7,2016
+"Social Sciences","-",161,0,1383,193,0,8.6,0.46,2016
+"Chemistry","-",156,0,3506,266,0,22.5,0.78,2016
+"Mathematics","-",145,0,1446,137,0,10,0.78,2016
+"Biochemistry, Genetics and Molecular Biology","-",117,0,3132,247,0,26.8,0.96,2016
+"Environmental Science","-",107,0,2588,194,0,24.2,0.84,2016
+"Earth and Planetary Sciences","-",97,0,2093,160,0,21.6,0.82,2016
+"Nursing","-",81,0,670,157,0,8.3,0.41,2016
+"Arts and Humanities","-",79,0,363,87,0,4.6,0.44,2016
+"Dentistry","-",73,0,1708,161,0,23.4,1.18,2016
+"Business, Management and Accounting","-",64,0,448,83,0,7,0.4,2016
+"Veterinary","-",60,0,690,115,0,11.5,0.75,2016
+"Pharmacology, Toxicology and Pharmaceutics","-",53,0,1115,129,0,21,0.92,2016
+"Decision Sciences","-",51,0,554,64,0,10.9,0.6,2016
+"Chemical Engineering","-",50,0,1678,97,0,33.6,0.83,2016
+"Immunology and Microbiology","-",50,0,1401,127,0,28,0.8,2016
+"Economics, Econometrics and Finance","-",46,0,742,40,0,16.1,0.85,2016
+"Neuroscience","-",44,0,1040,89,0,23.6,0.68,2016
+"Psychology","-",31,0,277,28,0,8.9,0.43,2016
+"Multidisciplinary","-",30,0,1944,69,0,64.8,1.02,2016
+"Energy","-",30,0,707,69,0,23.6,3.84,2016
+"Health Professions","-",14,0,209,33,0,14.9,0.78,2016
+"Medicine","-",365,0,9001,603,0,24.7,0.87,2015
+"Physics and Astronomy","-",235,0,6129,265,0,26.1,0.98,2015
+"Engineering","-",199,0,2842,292,0,14.3,0.65,2015
+"Computer Science","-",181,0,2490,216,0,13.8,0.84,2015
+"Chemistry","-",161,0,3744,258,0,23.3,0.72,2015
+"Agricultural and Biological Sciences","-",154,0,3891,279,0,25.3,1,2015
+"Mathematics","-",141,0,1425,160,0,10.1,0.79,2015
+"Materials Science","-",135,0,2737,183,0,20.3,0.75,2015
+"Social Sciences","-",134,0,973,158,0,7.3,0.46,2015
+"Biochemistry, Genetics and Molecular Biology","-",119,0,3500,258,0,29.4,0.97,2015
+"Nursing","-",84,0,706,152,0,8.4,0.43,2015
+"Dentistry","-",74,0,2702,137,0,36.5,1.64,2015
+"Environmental Science","-",72,0,1633,144,0,22.7,1.71,2015
+"Earth and Planetary Sciences","-",67,0,1829,118,0,27.3,1.01,2015
+"Chemical Engineering","-",56,0,1281,95,0,22.9,0.69,2015
+"Immunology and Microbiology","-",56,0,1622,123,0,29,0.91,2015
+"Pharmacology, Toxicology and Pharmaceutics","-",53,0,1178,100,0,22.2,1.04,2015
+"Arts and Humanities","-",51,0,491,58,0,9.6,0.97,2015
+"Multidisciplinary","-",46,0,2008,86,0,43.7,0.96,2015
+"Veterinary","-",45,0,423,93,0,9.4,0.54,2015
+"Neuroscience","-",43,0,836,67,0,19.4,0.51,2015
+"Business, Management and Accounting","-",39,0,436,46,0,11.2,0.56,2015
+"Economics, Econometrics and Finance","-",35,0,542,36,0,15.5,2.78,2015
+"Decision Sciences","-",32,0,473,44,0,14.8,0.78,2015
+"Energy","-",32,0,443,69,0,13.8,0.73,2015
+"Psychology","-",28,0,569,34,0,20.3,0.52,2015
+"Health Professions","-",18,0,384,46,0,21.3,1.11,2015
+"Medicine","-",340,0,6593,603,0,19.4,0.68,2014
+"Physics and Astronomy","-",240,0,4969,228,0,20.7,0.86,2014
+"Engineering","-",188,0,2276,256,0,12.1,0.56,2014
+"Computer Science","-",166,0,1984,208,0,12,0.67,2014
+"Materials Science","-",147,0,2374,167,0,16.1,0.68,2014
+"Agricultural and Biological Sciences","-",141,0,3555,265,0,25.2,0.87,2014
+"Social Sciences","-",135,0,955,170,0,7.1,0.46,2014
+"Chemistry","-",120,0,3438,202,0,28.7,0.93,2014
+"Mathematics","-",110,0,1109,127,0,10.1,0.81,2014
+"Biochemistry, Genetics and Molecular Biology","-",103,0,3440,189,0,33.4,0.81,2014
+"Earth and Planetary Sciences","-",101,0,2781,185,0,27.5,0.95,2014
+"Nursing","-",71,0,562,125,0,7.9,0.56,2014
+"Veterinary","-",69,0,1174,126,0,17,0.83,2014
+"Arts and Humanities","-",64,0,146,66,0,2.3,0.17,2014
+"Environmental Science","-",63,0,1382,120,0,21.9,0.72,2014
+"Chemical Engineering","-",59,0,1797,82,0,30.5,1.71,2014
+"Immunology and Microbiology","-",59,0,1662,139,0,28.2,0.81,2014
+"Dentistry","-",59,0,1487,97,0,25.2,1.23,2014
+"Pharmacology, Toxicology and Pharmaceutics","-",54,0,1338,115,0,24.8,0.99,2014
+"Neuroscience","-",36,0,863,72,0,24,0.54,2014
+"Psychology","-",36,0,184,49,0,5.1,0.19,2014
+"Energy","-",29,0,740,47,0,25.5,0.83,2014
+"Economics, Econometrics and Finance","-",27,0,278,27,0,10.3,1.14,2014
+"Business, Management and Accounting","-",23,0,287,39,0,12.5,1.3,2014
+"Decision Sciences","-",22,0,265,38,0,12,0.73,2014
+"Multidisciplinary","-",21,0,1202,30,0,57.2,1.16,2014
+"Health Professions","-",14,0,193,28,0,13.8,0.4,2014
+"Medicine","-",325,0,6296,506,0,19.4,0.65,2013
+"Physics and Astronomy","-",247,0,4961,254,0,20.1,0.91,2013
+"Engineering","-",167,0,2409,243,0,14.4,0.7,2013
+"Computer Science","-",163,0,2624,205,0,16.1,0.86,2013
+"Mathematics","-",139,0,2478,146,0,17.8,0.89,2013
+"Chemistry","-",135,0,2998,198,0,22.2,0.69,2013
+"Materials Science","-",134,0,2922,160,0,21.8,0.8,2013
+"Social Sciences","-",109,0,972,145,0,8.9,0.48,2013
+"Agricultural and Biological Sciences","-",98,0,2920,165,0,29.8,1.07,2013
+"Biochemistry, Genetics and Molecular Biology","-",94,0,3297,214,0,35.1,0.89,2013
+"Nursing","-",94,0,500,159,0,5.3,0.41,2013
+"Earth and Planetary Sciences","-",68,0,1708,129,0,25.1,1.1,2013
+"Veterinary","-",68,0,524,133,0,7.7,0.5,2013
+"Dentistry","-",58,0,1280,86,0,22.1,0.86,2013
+"Environmental Science","-",57,0,1425,103,0,25,1.04,2013
+"Arts and Humanities","-",50,0,653,67,0,13.1,0.62,2013
+"Pharmacology, Toxicology and Pharmaceutics","-",48,0,1255,102,0,26.1,0.92,2013
+"Immunology and Microbiology","-",47,0,1250,117,0,26.6,0.86,2013
+"Chemical Engineering","-",41,0,652,61,0,15.9,0.54,2013
+"Economics, Econometrics and Finance","-",37,0,308,29,0,8.3,0.6,2013
+"Neuroscience","-",36,0,579,86,0,16.1,0.38,2013
+"Business, Management and Accounting","-",35,0,175,42,0,5,0.32,2013
+"Multidisciplinary","-",32,0,649,54,0,20.3,0.3,2013
+"Energy","-",27,0,658,33,0,24.4,0.81,2013
+"Decision Sciences","-",26,0,964,34,0,37.1,1.49,2013
+"Psychology","-",23,0,589,40,0,25.6,0.46,2013
+"Health Professions","-",10,0,124,20,0,12.4,0.38,2013
+"Medicine","-",341,0,6342,509,0,18.6,0.58,2012
+"Physics and Astronomy","-",205,0,4640,206,0,22.6,1.01,2012
+"Engineering","-",175,0,2758,219,0,15.8,0.93,2012
+"Materials Science","-",141,0,2580,159,0,18.3,0.83,2012
+"Computer Science","-",138,0,1356,168,0,9.8,0.7,2012
+"Chemistry","-",120,0,3184,178,0,26.5,0.69,2012
+"Social Sciences","-",102,0,1423,104,0,14,0.48,2012
+"Agricultural and Biological Sciences","-",101,0,2430,171,0,24.1,0.9,2012
+"Mathematics","-",100,0,1464,115,0,14.6,0.83,2012
+"Biochemistry, Genetics and Molecular Biology","-",98,0,3526,195,0,36,0.93,2012
+"Nursing","-",69,0,641,115,0,9.3,0.31,2012
+"Earth and Planetary Sciences","-",68,0,2658,104,0,39.1,1.22,2012
+"Veterinary","-",68,0,1052,105,0,15.5,1.12,2012
+"Environmental Science","-",59,0,1580,99,0,26.8,0.78,2012
+"Pharmacology, Toxicology and Pharmaceutics","-",53,0,1432,122,0,27,1.04,2012
+"Dentistry","-",51,0,1430,72,0,28,1.15,2012
+"Arts and Humanities","-",46,0,122,41,0,2.7,0.18,2012
+"Immunology and Microbiology","-",39,0,934,84,0,23.9,0.69,2012
+"Neuroscience","-",31,0,550,61,0,17.7,0.56,2012
+"Chemical Engineering","-",30,0,990,55,0,33,1.16,2012
+"Business, Management and Accounting","-",29,0,336,43,0,11.6,0.49,2012
+"Decision Sciences","-",29,0,791,34,0,27.3,1.16,2012
+"Economics, Econometrics and Finance","-",27,0,448,29,0,16.6,0.74,2012
+"Energy","-",21,0,414,46,0,19.7,0.98,2012
+"Psychology","-",21,0,1065,24,0,50.7,0.76,2012
+"Multidisciplinary","-",20,0,856,26,0,42.8,0.7,2012
+"Health Professions","-",12,0,93,27,0,7.8,0.27,2012
+"Medicine","-",335,0,6068,500,0,18.1,0.72,2011
+"Physics and Astronomy","-",204,0,5079,170,0,24.9,1.04,2011
+"Engineering","-",128,0,2587,165,0,20.2,0.82,2011
+"Computer Science","-",123,0,1208,153,0,9.8,0.73,2011
+"Mathematics","-",113,0,1381,106,0,12.2,0.71,2011
+"Chemistry","-",111,0,2890,164,0,26,0.88,2011
+"Materials Science","-",103,0,3006,122,0,29.2,0.98,2011
+"Social Sciences","-",75,0,707,96,0,9.4,0.46,2011
+"Agricultural and Biological Sciences","-",69,0,1643,115,0,23.8,0.65,2011
+"Biochemistry, Genetics and Molecular Biology","-",66,0,2032,117,0,30.8,0.84,2011
+"Environmental Science","-",56,0,1499,88,0,26.8,0.7,2011
+"Dentistry","-",53,0,1385,59,0,26.1,0.93,2011
+"Earth and Planetary Sciences","-",49,0,1272,82,0,26,0.8,2011
+"Veterinary","-",44,0,602,71,0,13.7,0.98,2011
+"Pharmacology, Toxicology and Pharmaceutics","-",43,0,1248,86,0,29,1.04,2011
+"Neuroscience","-",41,0,878,64,0,21.4,0.55,2011
+"Nursing","-",41,0,400,90,0,9.8,0.85,2011
+"Immunology and Microbiology","-",37,0,1194,78,0,32.3,1.26,2011
+"Chemical Engineering","-",32,0,1228,35,0,38.4,1.64,2011
+"Energy","-",30,0,361,46,0,12,0.83,2011
+"Arts and Humanities","-",29,0,59,32,0,2,0.22,2011
+"Decision Sciences","-",28,0,431,37,0,15.4,0.8,2011
+"Psychology","-",25,0,366,36,0,14.6,0.35,2011
+"Multidisciplinary","-",24,0,908,45,0,37.8,0.43,2011
+"Economics, Econometrics and Finance","-",19,0,96,26,0,5.1,0.38,2011
+"Business, Management and Accounting","-",17,0,119,29,0,7,0.35,2011
+"Health Professions","-",15,0,154,28,0,10.3,0.31,2011
+"Medicine","-",301,0,5224,427,0,17.4,0.84,2010
+"Physics and Astronomy","-",151,0,3131,172,0,20.7,0.86,2010
+"Engineering","-",140,0,1698,194,0,12.1,0.56,2010
+"Computer Science","-",103,0,1438,125,0,14,0.95,2010
+"Mathematics","-",89,0,1797,89,0,20.2,0.88,2010
+"Materials Science","-",86,0,1980,110,0,23,0.94,2010
+"Chemistry","-",78,0,1831,125,0,23.5,0.71,2010
+"Agricultural and Biological Sciences","-",76,0,1713,146,0,22.5,0.74,2010
+"Biochemistry, Genetics and Molecular Biology","-",60,0,1763,123,0,29.4,0.68,2010
+"Neuroscience","-",56,0,1318,80,0,23.5,0.41,2010
+"Social Sciences","-",56,0,703,61,0,12.6,0.51,2010
+"Earth and Planetary Sciences","-",50,0,1333,96,0,26.7,0.78,2010
+"Veterinary","-",43,0,480,74,0,11.2,0.78,2010
+"Immunology and Microbiology","-",40,0,1085,72,0,27.1,0.75,2010
+"Nursing","-",39,0,410,54,0,10.5,0.5,2010
+"Environmental Science","-",37,0,656,74,0,17.7,0.52,2010
+"Dentistry","-",36,0,834,58,0,23.2,0.78,2010
+"Pharmacology, Toxicology and Pharmaceutics","-",33,0,1236,55,0,37.5,1.23,2010
+"Chemical Engineering","-",32,0,509,53,0,15.9,0.65,2010
+"Arts and Humanities","-",25,0,146,28,0,5.8,0.45,2010
+"Energy","-",23,0,300,36,0,13,0.46,2010
+"Business, Management and Accounting","-",20,0,200,30,0,10,0.59,2010
+"Decision Sciences","-",18,0,779,19,0,43.3,1.75,2010
+"Psychology","-",13,0,266,27,0,20.5,0.18,2010
+"Multidisciplinary","-",11,0,56,23,0,5.1,0.42,2010
+"Economics, Econometrics and Finance","-",10,0,198,11,0,19.8,0.52,2010
+"Health Professions","-",8,0,56,17,0,7,0.18,2010
+"Medicine","-",273,0,4800,400,0,17.6,0.6,2009
+"Physics and Astronomy","-",151,0,3662,163,0,24.3,1.07,2009
+"Engineering","-",121,0,2113,167,0,17.5,0.79,2009
+"Computer Science","-",113,0,1391,126,0,12.3,0.72,2009
+"Materials Science","-",97,0,1895,125,0,19.5,0.73,2009
+"Mathematics","-",91,0,1361,94,0,15,0.55,2009
+"Chemistry","-",80,0,2485,162,0,31.1,0.8,2009
+"Agricultural and Biological Sciences","-",72,0,2473,126,0,34.3,1.02,2009
+"Biochemistry, Genetics and Molecular Biology","-",69,0,2504,121,0,36.3,0.99,2009
+"Neuroscience","-",58,0,1125,86,0,19.4,0.53,2009
+"Social Sciences","-",39,0,343,44,0,8.8,0.35,2009
+"Immunology and Microbiology","-",38,0,1306,52,0,34.4,0.94,2009
+"Environmental Science","-",36,0,1460,69,0,40.6,1.12,2009
+"Veterinary","-",36,0,706,67,0,19.6,0.77,2009
+"Energy","-",34,0,760,50,0,22.4,0.8,2009
+"Earth and Planetary Sciences","-",33,0,831,56,0,25.2,0.7,2009
+"Pharmacology, Toxicology and Pharmaceutics","-",31,0,1618,74,0,52.2,1.2,2009
+"Dentistry","-",30,0,815,43,0,27.2,0.89,2009
+"Nursing","-",27,0,123,50,0,4.6,0.76,2009
+"Chemical Engineering","-",26,0,665,45,0,25.6,0.69,2009
+"Arts and Humanities","-",24,0,246,33,0,10.3,0.69,2009
+"Decision Sciences","-",21,0,917,19,0,43.7,1.05,2009
+"Economics, Econometrics and Finance","-",16,0,237,16,0,14.8,0.56,2009
+"Psychology","-",13,0,271,19,0,20.8,0.38,2009
+"Multidisciplinary","-",10,0,233,27,0,23.3,0.28,2009
+"Health Professions","-",9,0,102,21,0,11.3,1.05,2009
+"Business, Management and Accounting","-",8,0,120,9,0,15,0.8,2009
+"Medicine","-",207,0,4972,310,0,24,0.57,2008
+"Physics and Astronomy","-",153,0,4115,144,0,26.9,1.13,2008
+"Materials Science","-",106,0,2373,110,0,22.4,0.92,2008
+"Engineering","-",105,0,2098,126,0,20,0.88,2008
+"Computer Science","-",85,0,1349,92,0,15.9,1.1,2008
+"Chemistry","-",78,0,7688,116,0,98.6,0.99,2008
+"Mathematics","-",78,0,1072,74,0,13.7,0.82,2008
+"Biochemistry, Genetics and Molecular Biology","-",58,0,1755,108,0,30.3,0.82,2008
+"Agricultural and Biological Sciences","-",53,0,2308,86,0,43.5,1.21,2008
+"Neuroscience","-",43,0,894,51,0,20.8,0.32,2008
+"Social Sciences","-",39,0,397,51,0,10.2,0.55,2008
+"Pharmacology, Toxicology and Pharmaceutics","-",38,0,1252,76,0,32.9,0.95,2008
+"Environmental Science","-",36,0,1490,55,0,41.4,1.18,2008
+"Immunology and Microbiology","-",30,0,939,66,0,31.3,0.7,2008
+"Veterinary","-",28,0,704,59,0,25.1,0.87,2008
+"Earth and Planetary Sciences","-",26,0,628,48,0,24.2,0.74,2008
+"Dentistry","-",26,0,1023,31,0,39.3,0.99,2008
+"Nursing","-",23,0,614,37,0,26.7,0.52,2008
+"Chemical Engineering","-",22,0,662,34,0,30.1,1.24,2008
+"Energy","-",20,0,526,26,0,26.3,1.31,2008
+"Psychology","-",16,0,276,19,0,17.3,0.35,2008
+"Arts and Humanities","-",15,0,100,20,0,6.7,0.48,2008
+"Decision Sciences","-",13,0,217,17,0,16.7,0.53,2008
+"Multidisciplinary","-",12,0,173,19,0,14.4,0.08,2008
+"Economics, Econometrics and Finance","-",12,0,39,10,0,3.3,0.12,2008
+"Business, Management and Accounting","-",9,0,53,14,0,5.9,0.15,2008
+"Health Professions","-",9,0,52,17,0,5.8,0.12,2008
+"Medicine","-",169,0,3445,264,0,20.4,0.81,2007
+"Physics and Astronomy","-",166,0,3309,149,0,19.9,0.77,2007
+"Materials Science","-",89,0,1879,78,0,21.1,0.96,2007
+"Chemistry","-",78,0,2002,118,0,25.7,0.72,2007
+"Engineering","-",75,0,1307,104,0,17.4,0.84,2007
+"Agricultural and Biological Sciences","-",59,0,1759,95,0,29.8,1.51,2007
+"Biochemistry, Genetics and Molecular Biology","-",59,0,2351,110,0,39.8,0.64,2007
+"Computer Science","-",59,0,772,78,0,13.1,0.94,2007
+"Mathematics","-",59,0,882,64,0,14.9,0.66,2007
+"Neuroscience","-",40,0,823,61,0,20.6,0.36,2007
+"Pharmacology, Toxicology and Pharmaceutics","-",40,0,1281,84,0,32,0.7,2007
+"Social Sciences","-",39,0,500,43,0,12.8,0.37,2007
+"Earth and Planetary Sciences","-",37,0,729,41,0,19.7,0.56,2007
+"Environmental Science","-",34,0,1263,48,0,37.1,1.07,2007
+"Immunology and Microbiology","-",34,0,823,64,0,24.2,1.96,2007
+"Veterinary","-",26,0,457,64,0,17.6,2.45,2007
+"Chemical Engineering","-",23,0,703,33,0,30.6,0.83,2007
+"Nursing","-",20,0,144,30,0,7.2,0.53,2007
+"Energy","-",19,0,259,28,0,13.6,0.6,2007
+"Arts and Humanities","-",17,0,126,18,0,7.4,0.66,2007
+"Dentistry","-",13,0,403,13,0,31,1.06,2007
+"Decision Sciences","-",11,0,295,18,0,26.8,1.02,2007
+"Economics, Econometrics and Finance","-",11,0,133,9,0,12.1,0.31,2007
+"Psychology","-",9,0,419,6,0,46.6,0.85,2007
+"Multidisciplinary","-",8,0,1093,10,0,136.6,1.81,2007
+"Business, Management and Accounting","-",6,0,228,9,0,38,0.71,2007
+"Health Professions","-",6,0,132,17,0,22,0.39,2007
+"Physics and Astronomy","-",134,0,3475,131,0,25.9,0.91,2006
+"Medicine","-",132,0,2765,256,0,20.9,0.57,2006
+"Chemistry","-",78,0,2139,117,0,27.4,0.72,2006
+"Engineering","-",70,0,1558,95,0,22.3,0.71,2006
+"Materials Science","-",69,0,1733,72,0,25.1,0.86,2006
+"Mathematics","-",56,0,1601,67,0,28.6,1.04,2006
+"Agricultural and Biological Sciences","-",41,0,1481,88,0,36.1,0.72,2006
+"Computer Science","-",40,0,1225,56,0,30.6,0.98,2006
+"Biochemistry, Genetics and Molecular Biology","-",35,0,1246,81,0,35.6,0.69,2006
+"Environmental Science","-",30,0,1538,56,0,51.3,0.98,2006
+"Pharmacology, Toxicology and Pharmaceutics","-",26,0,1531,60,0,58.9,1.09,2006
+"Neuroscience","-",23,0,675,41,0,29.3,0.48,2006
+"Immunology and Microbiology","-",17,0,448,41,0,26.4,0.66,2006
+"Earth and Planetary Sciences","-",16,0,762,27,0,47.6,0.83,2006
+"Veterinary","-",15,0,253,31,0,16.9,0.55,2006
+"Nursing","-",14,0,70,15,0,5,0.75,2006
+"Social Sciences","-",14,0,116,15,0,8.3,0.16,2006
+"Dentistry","-",14,0,591,22,0,42.2,1.18,2006
+"Chemical Engineering","-",11,0,140,15,0,12.7,0.57,2006
+"Arts and Humanities","-",10,0,24,9,0,2.4,0.32,2006
+"Decision Sciences","-",10,0,200,16,0,20,0.58,2006
+"Psychology","-",8,0,141,17,0,17.6,0.27,2006
+"Multidisciplinary","-",7,0,69,15,0,9.9,0.17,2006
+"Energy","-",6,0,439,11,0,73.2,2.03,2006
+"Business, Management and Accounting","-",5,0,25,8,0,5,0.07,2006
+"Health Professions","-",3,0,28,23,0,9.3,0.44,2006
+"Economics, Econometrics and Finance","-",1,0,2,1,0,2,0,2006
+"Physics and Astronomy","-",136,0,3075,126,0,22.6,1.03,2005
+"Medicine","-",95,0,3198,149,0,33.7,0.71,2005
+"Engineering","-",64,0,1019,81,0,15.9,0.93,2005
+"Materials Science","-",58,0,1220,47,0,21,0.94,2005
+"Mathematics","-",54,0,756,61,0,14,0.67,2005
+"Chemistry","-",51,0,1444,74,0,28.3,0.94,2005
+"Biochemistry, Genetics and Molecular Biology","-",39,0,1312,60,0,33.6,0.6,2005
+"Agricultural and Biological Sciences","-",25,0,1342,44,0,53.7,0.77,2005
+"Computer Science","-",25,0,290,41,0,11.6,0.71,2005
+"Neuroscience","-",25,0,926,57,0,37,0.61,2005
+"Immunology and Microbiology","-",22,0,744,30,0,33.8,0.56,2005
+"Earth and Planetary Sciences","-",19,0,788,30,0,41.5,0.68,2005
+"Environmental Science","-",18,0,1027,33,0,57.1,0.94,2005
+"Pharmacology, Toxicology and Pharmaceutics","-",17,0,676,32,0,39.8,0.78,2005
+"Chemical Engineering","-",14,0,825,22,0,58.9,1.77,2005
+"Arts and Humanities","-",13,0,108,15,0,8.3,0.72,2005
+"Nursing","-",13,0,5,19,0,0.4,0.08,2005
+"Veterinary","-",11,0,368,23,0,33.5,1.12,2005
+"Social Sciences","-",9,0,102,10,0,11.3,0.23,2005
+"Multidisciplinary","-",7,0,70,8,0,10,0.11,2005
+"Energy","-",6,0,113,12,0,18.8,0.73,2005
+"Dentistry","-",6,0,44,11,0,7.3,0.41,2005
+"Psychology","-",5,0,747,3,0,149.4,2.34,2005
+"Business, Management and Accounting","-",4,0,255,4,0,63.8,0.99,2005
+"Decision Sciences","-",4,0,253,8,0,63.3,1.03,2005
+"Health Professions","-",2,0,99,3,0,49.5,0.6,2005
+"Physics and Astronomy","-",138,0,3564,128,0,25.8,0.95,2004
+"Medicine","-",95,0,2118,159,0,22.3,0.47,2004
+"Materials Science","-",70,0,1182,62,0,16.9,0.82,2004
+"Mathematics","-",62,0,848,65,0,13.7,0.76,2004
+"Engineering","-",60,0,663,82,0,11.1,0.65,2004
+"Chemistry","-",49,0,1111,71,0,22.7,0.63,2004
+"Biochemistry, Genetics and Molecular Biology","-",37,0,1191,63,0,32.2,0.57,2004
+"Computer Science","-",30,0,445,43,0,14.8,0.99,2004
+"Pharmacology, Toxicology and Pharmaceutics","-",25,0,1204,50,0,48.2,0.82,2004
+"Agricultural and Biological Sciences","-",24,0,1132,40,0,47.2,0.6,2004
+"Neuroscience","-",22,0,755,44,0,34.3,0.43,2004
+"Earth and Planetary Sciences","-",20,0,525,29,0,26.3,0.39,2004
+"Immunology and Microbiology","-",18,0,522,40,0,29,0.56,2004
+"Environmental Science","-",16,0,534,27,0,33.4,0.81,2004
+"Chemical Engineering","-",13,0,202,23,0,15.5,0.56,2004
+"Nursing","-",12,0,45,18,0,3.8,0.14,2004
+"Energy","-",11,0,61,18,0,5.5,0.25,2004
+"Social Sciences","-",10,0,152,17,0,15.2,0.4,2004
+"Dentistry","-",10,0,385,20,0,38.5,0.78,2004
+"Veterinary","-",9,0,221,17,0,24.6,0.69,2004
+"Arts and Humanities","-",6,0,63,6,0,10.5,0.29,2004
+"Psychology","-",5,0,143,2,0,28.6,0.72,2004
+"Multidisciplinary","-",4,0,92,4,0,23,0.11,2004
+"Business, Management and Accounting","-",4,0,96,4,0,24,0.37,2004
+"Economics, Econometrics and Finance","-",4,0,54,6,0,13.5,0.18,2004
+"Health Professions","-",3,0,61,6,0,20.3,0.2,2004
+"Decision Sciences","-",2,0,55,2,0,27.5,1.07,2004
+"Physics and Astronomy","-",102,0,1573,104,0,15.4,0.65,2003
+"Medicine","-",93,0,1811,212,0,19.5,0.49,2003
+"Materials Science","-",59,0,856,59,0,14.5,0.67,2003
+"Mathematics","-",41,0,659,43,0,16.1,0.57,2003
+"Engineering","-",40,0,503,39,0,12.6,0.48,2003
+"Chemistry","-",30,0,977,40,0,32.6,0.59,2003
+"Neuroscience","-",23,0,653,44,0,28.4,0.76,2003
+"Immunology and Microbiology","-",21,0,523,44,0,24.9,0.64,2003
+"Biochemistry, Genetics and Molecular Biology","-",20,0,781,37,0,39.1,0.6,2003
+"Computer Science","-",18,0,411,29,0,22.8,0.5,2003
+"Agricultural and Biological Sciences","-",16,0,700,28,0,43.8,1.27,2003
+"Energy","-",13,0,273,21,0,21,1.63,2003
+"Environmental Science","-",12,0,549,18,0,45.8,1.26,2003
+"Earth and Planetary Sciences","-",11,0,338,22,0,30.7,0.75,2003
+"Pharmacology, Toxicology and Pharmaceutics","-",11,0,474,17,0,43.1,0.57,2003
+"Chemical Engineering","-",10,0,431,14,0,43.1,1.6,2003
+"Arts and Humanities","-",8,0,19,9,0,2.4,0.15,2003
+"Veterinary","-",8,0,248,19,0,31,1.42,2003
+"Social Sciences","-",7,0,133,7,0,19,0.33,2003
+"Dentistry","-",6,0,132,10,0,22,0.52,2003
+"Nursing","-",5,0,29,6,0,5.8,0.1,2003
+"Business, Management and Accounting","-",3,0,4,3,0,1.3,0,2003
+"Decision Sciences","-",3,0,298,3,0,99.3,0.53,2003
+"Economics, Econometrics and Finance","-",2,0,4,2,0,2,0.32,2003
+"Multidisciplinary","-",1,0,0,1,0,0,0,2003
+"Psychology","-",1,0,2,1,0,2,0,2003
+"Health Professions","-",1,0,52,1,0,52,1,2003
+"Physics and Astronomy","-",115,0,2401,103,0,20.9,0.8,2002
+"Materials Science","-",53,0,1006,44,0,19,1.32,2002
+"Chemistry","-",52,0,974,100,0,18.7,0.79,2002
+"Medicine","-",52,0,1286,117,0,24.7,0.49,2002
+"Mathematics","-",38,0,864,44,0,22.7,0.95,2002
+"Engineering","-",35,0,781,44,0,22.3,1.58,2002
+"Biochemistry, Genetics and Molecular Biology","-",30,0,1081,55,0,36,0.56,2002
+"Computer Science","-",20,0,351,36,0,17.6,0.71,2002
+"Immunology and Microbiology","-",17,0,438,34,0,25.8,0.69,2002
+"Neuroscience","-",16,0,267,31,0,16.7,0.21,2002
+"Environmental Science","-",15,0,693,28,0,46.2,0.92,2002
+"Agricultural and Biological Sciences","-",14,0,956,27,0,68.3,0.81,2002
+"Pharmacology, Toxicology and Pharmaceutics","-",13,0,349,27,0,26.8,0.47,2002
+"Earth and Planetary Sciences","-",10,0,363,23,0,36.3,0.58,2002
+"Veterinary","-",9,0,153,20,0,17,0.32,2002
+"Chemical Engineering","-",8,0,229,21,0,28.6,1.01,2002
+"Multidisciplinary","-",7,0,262,14,0,37.4,0.12,2002
+"Energy","-",5,0,47,12,0,9.4,0.68,2002
+"Dentistry","-",5,0,148,10,0,29.6,0.66,2002
+"Arts and Humanities","-",4,0,44,8,0,11,0.13,2002
+"Nursing","-",4,0,89,13,0,22.3,0.17,2002
+"Psychology","-",4,0,60,4,0,15,2.83,2002
+"Health Professions","-",4,0,43,12,0,10.8,0.2,2002
+"Social Sciences","-",3,0,6,6,0,2,0.26,2002
+"Business, Management and Accounting","-",2,0,1,2,0,0.5,0.17,2002
+"Economics, Econometrics and Finance","-",2,0,1,2,0,0.5,0.17,2002
+"Decision Sciences","-",1,0,0,1,0,0,0,2002
+"Physics and Astronomy","-",131,0,1927,122,0,14.7,0.72,2001
+"Materials Science","-",62,0,1034,57,0,16.7,0.85,2001
+"Medicine","-",62,0,1597,149,0,25.8,0.56,2001
+"Mathematics","-",53,0,457,51,0,8.6,0.63,2001
+"Engineering","-",47,0,837,52,0,17.8,1.16,2001
+"Chemistry","-",45,0,1304,67,0,29,0.84,2001
+"Computer Science","-",27,0,244,40,0,9,0.43,2001
+"Biochemistry, Genetics and Molecular Biology","-",20,0,472,38,0,23.6,0.6,2001
+"Immunology and Microbiology","-",16,0,723,34,0,45.2,0.78,2001
+"Agricultural and Biological Sciences","-",15,0,608,20,0,40.5,0.94,2001
+"Energy","-",15,0,297,15,0,19.8,1.17,2001
+"Environmental Science","-",12,0,332,13,0,27.7,0.81,2001
+"Neuroscience","-",12,0,348,22,0,29,0.52,2001
+"Earth and Planetary Sciences","-",11,0,596,14,0,54.2,1.41,2001
+"Chemical Engineering","-",10,0,280,13,0,28,1.4,2001
+"Pharmacology, Toxicology and Pharmaceutics","-",8,0,268,12,0,33.5,0.72,2001
+"Dentistry","-",8,0,198,10,0,24.8,0.67,2001
+"Multidisciplinary","-",5,0,85,10,0,17,0.1,2001
+"Arts and Humanities","-",3,0,111,7,0,37,1.57,2001
+"Social Sciences","-",3,0,105,3,0,35,1.15,2001
+"Economics, Econometrics and Finance","-",2,0,12,2,0,6,0.45,2001
+"Nursing","-",2,0,35,4,0,17.5,0.09,2001
+"Psychology","-",1,0,17,2,0,17,0.21,2001
+"Veterinary","-",1,0,12,3,0,12,0,2001
+"Health Professions","-",1,0,14,3,0,14,1.07,2001
+"Physics and Astronomy","-",109,0,1954,111,0,17.9,0.96,2000
+"Materials Science","-",58,0,1022,57,0,17.6,1.07,2000
+"Medicine","-",46,0,808,103,0,17.6,0.4,2000
+"Chemistry","-",43,0,1386,54,0,32.2,1.13,2000
+"Engineering","-",43,0,661,58,0,15.4,0.72,2000
+"Mathematics","-",28,0,546,40,0,19.5,1.03,2000
+"Biochemistry, Genetics and Molecular Biology","-",27,0,815,37,0,30.2,0.75,2000
+"Computer Science","-",22,0,259,33,0,11.8,0.54,2000
+"Earth and Planetary Sciences","-",16,0,291,15,0,18.2,0.21,2000
+"Environmental Science","-",15,0,1023,25,0,68.2,1.53,2000
+"Immunology and Microbiology","-",15,0,310,30,0,20.7,0.37,2000
+"Neuroscience","-",15,0,216,36,0,14.4,0.23,2000
+"Chemical Engineering","-",12,0,372,17,0,31,1.44,2000
+"Agricultural and Biological Sciences","-",11,0,317,24,0,28.8,0.58,2000
+"Pharmacology, Toxicology and Pharmaceutics","-",9,0,385,16,0,42.8,0.65,2000
+"Social Sciences","-",8,0,40,11,0,5,0.04,2000
+"Energy","-",6,0,88,6,0,14.7,0.87,2000
+"Multidisciplinary","-",5,0,37,5,0,7.4,0.02,2000
+"Dentistry","-",5,0,222,8,0,44.4,0.87,2000
+"Veterinary","-",4,0,72,6,0,18,0.31,2000
+"Arts and Humanities","-",2,0,23,2,0,11.5,0,2000
+"Economics, Econometrics and Finance","-",2,0,10,3,0,5,1.24,2000
+"Nursing","-",2,0,13,8,0,6.5,0,2000
+"Health Professions","-",1,0,45,1,0,45,0.47,2000
+"Physics and Astronomy","-",114,0,2209,108,0,19.4,0.92,1999
+"Medicine","-",47,0,1363,104,0,29,0.87,1999
+"Materials Science","-",45,0,861,52,0,19.1,1,1999
+"Engineering","-",36,0,278,48,0,7.7,0.41,1999
+"Mathematics","-",36,0,472,41,0,13.1,0.9,1999
+"Chemistry","-",35,0,796,51,0,22.7,1.01,1999
+"Computer Science","-",31,0,187,44,0,6,0.3,1999
+"Biochemistry, Genetics and Molecular Biology","-",20,0,489,33,0,24.5,0.84,1999
+"Immunology and Microbiology","-",18,0,511,40,0,28.4,0.45,1999
+"Environmental Science","-",15,0,1100,19,0,73.3,1.73,1999
+"Agricultural and Biological Sciences","-",14,0,350,22,0,25,0.71,1999
+"Pharmacology, Toxicology and Pharmaceutics","-",10,0,214,13,0,21.4,0.49,1999
+"Earth and Planetary Sciences","-",9,0,254,8,0,28.2,0.6,1999
+"Neuroscience","-",9,0,294,20,0,32.7,0.25,1999
+"Energy","-",7,0,31,11,0,4.4,0.5,1999
+"Multidisciplinary","-",6,0,49,9,0,8.2,0.02,1999
+"Veterinary","-",6,0,200,13,0,33.3,0.99,1999
+"Social Sciences","-",4,0,78,10,0,19.5,1.05,1999
+"Dentistry","-",3,0,65,1,0,21.7,0.95,1999
+"Business, Management and Accounting","-",2,0,32,3,0,16,1.07,1999
+"Chemical Engineering","-",2,0,51,3,0,25.5,0.55,1999
+"Decision Sciences","-",2,0,11,3,0,5.5,0,1999
+"Nursing","-",2,0,159,1,0,79.5,2.16,1999
+"Arts and Humanities","-",1,0,5,1,0,5,0,1999
+"Economics, Econometrics and Finance","-",1,0,0,1,0,0,0,1999
+"Psychology","-",1,0,3,2,0,3,0.41,1999
+"Physics and Astronomy","-",118,0,1675,100,0,14.2,0.76,1998
+"Medicine","-",57,0,713,137,0,12.5,0.19,1998
+"Mathematics","-",53,0,604,53,0,11.4,0.88,1998
+"Materials Science","-",49,0,884,49,0,18,0.97,1998
+"Engineering","-",38,0,592,41,0,15.6,0.74,1998
+"Chemistry","-",34,0,582,38,0,17.1,0.59,1998
+"Computer Science","-",33,0,420,39,0,12.7,0.83,1998
+"Biochemistry, Genetics and Molecular Biology","-",30,0,601,46,0,20,0.42,1998
+"Immunology and Microbiology","-",17,0,517,30,0,30.4,0.41,1998
+"Neuroscience","-",15,0,313,33,0,20.9,0.31,1998
+"Pharmacology, Toxicology and Pharmaceutics","-",12,0,360,23,0,30,0.5,1998
+"Agricultural and Biological Sciences","-",11,0,277,16,0,25.2,0.65,1998
+"Environmental Science","-",7,0,370,12,0,52.9,2.03,1998
+"Chemical Engineering","-",6,0,197,12,0,32.8,0.56,1998
+"Energy","-",6,0,210,8,0,35,1.08,1998
+"Social Sciences","-",4,0,132,5,0,33,2.13,1998
+"Veterinary","-",4,0,123,4,0,30.8,0.54,1998
+"Multidisciplinary","-",2,0,13,3,0,6.5,0,1998
+"Decision Sciences","-",2,0,3,2,0,1.5,0,1998
+"Earth and Planetary Sciences","-",2,0,25,4,0,12.5,0.28,1998
+"Dentistry","-",2,0,94,4,0,47,0.59,1998
+"Arts and Humanities","-",1,0,8,1,0,8,0,1998
+"Economics, Econometrics and Finance","-",1,0,0,1,0,0,0,1998
+"Health Professions","-",1,0,34,1,0,34,0,1998
+"Physics and Astronomy","-",93,0,1002,93,0,10.8,0.64,1997
+"Medicine","-",47,0,586,98,0,12.5,0.34,1997
+"Engineering","-",36,0,339,51,0,9.4,0.71,1997
+"Materials Science","-",36,0,633,39,0,17.6,0.99,1997
+"Mathematics","-",28,0,205,33,0,7.3,0.68,1997
+"Chemistry","-",19,0,269,31,0,14.2,0.49,1997
+"Biochemistry, Genetics and Molecular Biology","-",17,0,308,26,0,18.1,0.34,1997
+"Computer Science","-",16,0,95,33,0,5.9,1.09,1997
+"Agricultural and Biological Sciences","-",14,0,722,20,0,51.6,0.81,1997
+"Earth and Planetary Sciences","-",13,0,1330,17,0,102.3,1.82,1997
+"Immunology and Microbiology","-",12,0,263,16,0,21.9,0.59,1997
+"Environmental Science","-",11,0,466,8,0,42.4,1.24,1997
+"Pharmacology, Toxicology and Pharmaceutics","-",10,0,229,17,0,22.9,0.76,1997
+"Neuroscience","-",7,0,253,15,0,36.1,0.39,1997
+"Energy","-",6,0,19,6,0,3.2,0.31,1997
+"Veterinary","-",5,0,123,14,0,24.6,0.54,1997
+"Chemical Engineering","-",4,0,134,4,0,33.5,0.71,1997
+"Arts and Humanities","-",3,0,170,2,0,56.7,3.71,1997
+"Health Professions","-",3,0,115,5,0,38.3,1.83,1997
+"Multidisciplinary","-",1,0,0,1,0,0,0,1997
+"Economics, Econometrics and Finance","-",1,0,2,1,0,2,0,1997
+"Social Sciences","-",1,0,9,1,0,9,1.22,1997
+"Dentistry","-",1,0,1,1,0,1,0,1997
+"Physics and Astronomy","-",88,0,1376,75,0,15.6,1.02,1996
+"Medicine","-",62,0,390,126,0,6.3,0.11,1996
+"Materials Science","-",34,0,547,40,0,16.1,1.25,1996
+"Chemistry","-",27,0,454,38,0,16.8,0.65,1996
+"Engineering","-",25,0,195,28,0,7.8,0.78,1996
+"Mathematics","-",23,0,409,30,0,17.8,1.3,1996
+"Biochemistry, Genetics and Molecular Biology","-",16,0,183,27,0,11.4,0.33,1996
+"Immunology and Microbiology","-",13,0,307,19,0,23.6,0.43,1996
+"Earth and Planetary Sciences","-",10,0,616,16,0,61.6,1.8,1996
+"Pharmacology, Toxicology and Pharmaceutics","-",10,0,97,16,0,9.7,0.32,1996
+"Neuroscience","-",9,0,86,17,0,9.6,0.26,1996
+"Chemical Engineering","-",8,0,252,11,0,31.5,1.34,1996
+"Environmental Science","-",7,0,133,10,0,19,0.72,1996
+"Social Sciences","-",6,0,75,6,0,12.5,0.08,1996
+"Agricultural and Biological Sciences","-",5,0,567,9,0,113.4,2.74,1996
+"Arts and Humanities","-",4,0,53,4,0,13.3,0.13,1996
+"Computer Science","-",4,0,56,10,0,14,1.64,1996
+"Energy","-",4,0,62,4,0,15.5,1.79,1996
+"Multidisciplinary","-",3,0,5,5,0,1.7,0,1996
+"Veterinary","-",3,0,81,5,0,27,0.42,1996
+"Economics, Econometrics and Finance","-",2,0,10,2,0,5,0.85,1996
+"Dentistry","-",2,0,70,2,0,35,0.94,1996
+"Business, Management and Accounting","-",1,0,2,1,0,2,0.6,1996
+"Decision Sciences","-",1,0,38,1,0,38,3.76,1996
+"Health Professions","-",1,0,0,1,0,0,0,1996
