@@ -414,6 +414,130 @@
       </div>
     </div>
 
+    <!-- Gráfico de áreas empilhadas -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="chart-container">
+          <h4 class="chart-title">Evolução da Composição da Pesquisa por Área</h4>
+          <div class="chart-tabs mb-3" id="stackedMetricTabs">
+            <button class="tab-btn active" onclick="changeStackedMetric('Scholarly.Output', this)">Produção
+              Científica</button>
+            <button class="tab-btn" onclick="changeStackedMetric('Citations', this)">Citações</button>
+            <button class="tab-btn" onclick="changeStackedMetric('Citations.per.Publication', this)">Citações /
+              Pub.</button>
+            <button class="tab-btn" onclick="changeStackedMetric('Field.weighted.Citation.Impact', this)">FWCI</button>
+          </div>
+          <div id="stackedAreaChart"></div>
+          <div class="chart-notes">
+            <i class="fas fa-chart-area me-1"></i>Participação percentual de cada área na métrica selecionada ao longo do
+            tempo.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Função para renderizar o gráfico de áreas empilhadas (percentual por ano)
+      function renderStackedArea(metric) {
+        const years = dashboardData.years;
+        const subjects = dashboardData.subjects;
+        const metricData = dashboardData.areaSeries[metric];
+
+        // Cria um array com os dados de cada área, no formato { name, y: array de valores por ano }
+        const traces = [];
+        const colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf', '#f4a261', '#e9c46a', '#2a9d8f', '#e76f51', '#d4a373', '#6c91b2', '#9c89b8', '#f0a3c2', '#b8b5e0', '#ffb3ba', '#c5e0b4', '#ffcc99', '#b5e3d5', '#f9c74f', '#f9844a', '#f94144', '#577590'];
+
+        // Ordenar áreas pela participação no último ano (para colocar as maiores na base)
+        const lastYearIdx = years.length - 1;
+        const sortedSubjects = [...subjects].sort((a, b) => {
+          const valA = metricData[a]?.[lastYearIdx] || 0;
+          const valB = metricData[b]?.[lastYearIdx] || 0;
+          return valA - valB; // ordem crescente para que as maiores fiquem em cima no empilhamento
+        });
+
+        sortedSubjects.forEach((subject, idx) => {
+          const yValues = metricData[subject] || new Array(years.length).fill(null);
+          traces.push({
+            x: years,
+            y: yValues,
+            name: abbreviate(subject), // usa a mesma abreviação do resto do dashboard
+            type: 'scatter',
+            mode: 'lines',
+            fill: 'tonexty',
+            stackgroup: 'one',
+            groupnorm: 'percent',   // mostra percentual por ano (soma 100% em cada ano)
+            line: { width: 0.5 },
+            hoverinfo: 'x+y+name',
+            hovertemplate: '<b>%{fullData.name}</b><br>Ano: %{x}<br>' + dashboardData.metricLabels[metric] + ': %{y:,.1f}%<extra></extra>'
+          });
+        });
+
+        const layout = {
+          paper_bgcolor: 'rgba(0,0,0,0)',
+          plot_bgcolor: 'rgba(0,0,0,0)',
+          font: { family: 'Inter, sans-serif', color: '#1f2937' },
+          margin: { t: 30, r: 20, b: 60, l: 70 },
+          xaxis: {
+            title: 'Ano',
+            tickvals: years,
+            tickformat: 'd',
+            fixedrange: true,
+            gridcolor: 'rgba(0,0,0,0.04)',
+            showgrid: true,
+            showline: true,
+            linecolor: 'rgba(0,0,0,0.12)',
+            linewidth: 1
+          },
+          yaxis: {
+            title: 'Participação (%)',
+            tickformat: '.0f',
+            range: [0, 100],
+            fixedrange: true,
+            gridcolor: 'rgba(0,0,0,0.04)',
+            showgrid: true,
+            showline: true,
+            linecolor: 'rgba(0,0,0,0.12)',
+            linewidth: 1
+          },
+          legend: {
+            orientation: 'v',
+            y: 1,
+            x: 1,
+            xanchor: 'left',
+            yanchor: 'top',
+            bgcolor: 'rgba(255,255,255,0.8)',
+            bordercolor: 'rgba(0,0,0,0.1)',
+            borderwidth: 1,
+            font: { size: 9 }
+          },
+          hovermode: 'closest'
+        };
+
+        Plotly.newPlot('stackedAreaChart', traces, layout, chartConfig);
+      }
+
+      // Variável global para a métrica atual do gráfico de áreas
+      let currentStackedMetric = 'Scholarly.Output';
+
+      // Função chamada pelos botões de métrica
+      function changeStackedMetric(metric, btn) {
+        currentStackedMetric = metric;
+        // Atualiza a classe active nos botões
+        const container = document.getElementById('stackedMetricTabs');
+        if (container) {
+          container.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        }
+        renderStackedArea(metric);
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        // Verifica se o elemento existe para evitar erro caso o gráfico não tenha sido inserido
+        if (document.getElementById('stackedAreaChart')) {
+          renderStackedArea(currentStackedMetric);
+        }
+      });
+    </script>
+
     <!-- 2. Evolução das 3 principais áreas -->
     <div class="row mb-4">
       <div class="col-12">
