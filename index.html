@@ -430,7 +430,7 @@
           <div id="stackedAreaChart"></div>
           <div class="chart-notes">
             <i class="fas fa-chart-area me-1"></i>Participação percentual de cada área na métrica selecionada ao longo do
-            tempo.
+            tempo, com as 10 menores áreas agrupadas em “Outros”.
           </div>
         </div>
       </div>
@@ -447,30 +447,59 @@
         const traces = [];
         const colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf', '#f4a261', '#e9c46a', '#2a9d8f', '#e76f51', '#d4a373', '#6c91b2', '#9c89b8', '#f0a3c2', '#b8b5e0', '#ffb3ba', '#c5e0b4', '#ffcc99', '#b5e3d5', '#f9c74f', '#f9844a', '#f94144', '#577590'];
 
-        // Ordenar áreas pela participação no último ano (para colocar as maiores na base)
         const lastYearIdx = years.length - 1;
-        const sortedSubjects = [...subjects].sort((a, b) => {
-          const valA = metricData[a]?.[lastYearIdx] || 0;
-          const valB = metricData[b]?.[lastYearIdx] || 0;
-          return valA - valB; // ordem crescente para que as maiores fiquem em cima no empilhamento
-        });
+        const rankedSubjects = [...subjects]
+          .map(subject => ({
+            subject,
+            values: metricData[subject] || new Array(years.length).fill(null),
+            lastValue: metricData[subject]?.[lastYearIdx] ?? 0
+          }))
+          .sort((a, b) => a.lastValue - b.lastValue);
 
-        sortedSubjects.forEach((subject, idx) => {
-          const yValues = metricData[subject] || new Array(years.length).fill(null);
+        const groupedSubjects = rankedSubjects.slice(0, 10);
+        const keptSubjects = rankedSubjects.slice(10);
+
+        // Coloca "Outros" como base da pilha e mantém as demais áreas acima dela
+        if (groupedSubjects.length) {
+          const othersValues = years.map((_, idx) => groupedSubjects.reduce((sum, item) => sum + (Number(item.values[idx]) || 0), 0));
           traces.push({
             x: years,
-            y: yValues,
-            name: abbreviate(subject), // usa a mesma abreviação do resto do dashboard
+            y: othersValues,
+            name: 'Outros',
             type: 'scatter',
             mode: 'lines',
             fill: 'tonexty',
             stackgroup: 'one',
-            groupnorm: 'percent',   // mostra percentual por ano (soma 100% em cada ano)
-            line: { width: 0.5 },
+            groupnorm: 'percent',
+            line: {
+              width: 0.5,
+              color: '#6b7280'
+            },
             hoverinfo: 'x+y+name',
             hovertemplate: '<b>%{fullData.name}</b><br>Ano: %{x}<br>' + dashboardData.metricLabels[metric] + ': %{y:,.1f}%<extra></extra>'
           });
-        });
+        }
+
+        keptSubjects
+          .sort((a, b) => a.lastValue - b.lastValue)
+          .forEach((item, idx) => {
+            traces.push({
+              x: years,
+              y: item.values,
+              name: abbreviate(item.subject),
+              type: 'scatter',
+              mode: 'lines',
+              fill: 'tonexty',
+              stackgroup: 'one',
+              groupnorm: 'percent',
+              line: {
+                width: 0.5,
+                color: colors[idx % colors.length]
+              },
+              hoverinfo: 'x+y+name',
+              hovertemplate: '<b>%{fullData.name}</b><br>Ano: %{x}<br>' + dashboardData.metricLabels[metric] + ': %{y:,.1f}%<extra></extra>'
+            });
+          });
 
         const layout = {
           paper_bgcolor: 'rgba(0,0,0,0)',
@@ -731,8 +760,10 @@
         "years": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
         "fwci": [0.67, 0.68, 0.62, 0.78, 0.75, 0.71, 0.79, 0.6, 0.68, 0.81, 0.72, 0.76, 0.81, 0.73, 0.76, 0.75, 0.74, 0.72, 0.78, 0.85, 0.82, 0.86, 0.83, 0.79, 0.84, 0.97, 0.78, 0.74, 0.75, 0.7],
         "output": [232, 237, 284, 274, 290, 320, 322, 354, 453, 455, 565, 716, 826, 973, 1047, 1250, 1382, 1538, 1554, 1660, 1809, 1928, 2117, 2150, 2531, 2790, 2505, 2464, 2442, 2591],
+        "outputBrazil": [9420, 11205, 12638, 13457, 15095, 16335, 19029, 21396, 24292, 27574, 34845, 38476, 43743, 47527, 51667, 55829, 61810, 65105, 68612, 72005, 76664, 81778, 87431, 92849, 100426, 106047, 98393, 92940, 95582, 99715],
         "cpp": [15.1, 18.9, 16.5, 22.1, 22.6, 21.5, 24.5, 19.3, 23.7, 25.8, 25.6, 22.7, 29.7, 20.2, 17.9, 18.4, 18.7, 17.6, 18.5, 19.7, 17.8, 19.7, 17.7, 15.9, 15.3, 14.0, 8.9, 6.1, 3.5, 1.2],
-        "totalCitations": [3502, 4471, 4683, 6046, 6548, 6873, 7880, 6829, 10721, 11743, 14450, 16254, 24546, 19690, 18752, 23011, 25817, 27055, 28805, 32733, 32116, 37982, 37399, 34232, 38667, 38929, 22335, 15120, 8534, 2988]
+        "totalCitations": [3502, 4471, 4683, 6046, 6548, 6873, 7880, 6829, 10721, 11743, 14450, 16254, 24546, 19690, 18752, 23011, 25817, 27055, 28805, 32733, 32116, 37982, 37399, 34232, 38667, 38929, 22335, 15120, 8534, 2988],
+        "totalCitationsBrazil": [213735, 254106, 329736, 362781, 476734, 467692, 583956, 636900, 742279, 852331, 934488, 1031359, 1163929, 1193914, 1237033, 1313187, 1391709, 1475787, 1501888, 1661893, 1763497, 1804600, 1802213, 1682247, 1801446, 1488064, 1020922, 672542, 409283, 129836]
       }
     };
 
@@ -779,18 +810,102 @@
       yaxis: { fixedrange: true, gridcolor: 'rgba(0,0,0,0.04)', showgrid: true, showline: true, linecolor: 'rgba(0,0,0,0.12)', linewidth: 1, tickfont: { size: 10, color: '#6b7280' } }
     };
 
-    function buildLineChart(divId, x, y, color, title, yTitle, tickformat) {
-      const trace = { x, y, type: 'scatter', mode: 'lines+markers', line: { color, width: 4, shape: 'spline' }, marker: { color, size: 8, line: { color: 'white', width: 2 } }, hovertemplate: '<b>Ano:</b> %{x}<br><b>' + title + ':</b> %{y}<extra></extra>', name: title };
-      const layout = JSON.parse(JSON.stringify(commonLayout)); layout.yaxis.title = yTitle; layout.yaxis.tickformat = tickformat; layout.margin = { t: 20, r: 20, b: 60, l: 60 }; layout.showlegend = false;
-      Plotly.newPlot(divId, [trace], layout, chartConfig);
+    function buildLineChart(divId, x, y, color, title, yTitle, tickformat, options) {
+      const traces = [];
+      const config = options || {};
+
+      if (config.backgroundBars && Array.isArray(config.backgroundBars.values)) {
+        traces.push({
+          x,
+          y: config.backgroundBars.values,
+          type: 'bar',
+          name: config.backgroundBars.name || 'Brasil',
+          marker: {
+            color: config.backgroundBars.color || 'rgba(107, 114, 128, 0.25)',
+            line: { color: config.backgroundBars.borderColor || 'rgba(107, 114, 128, 0.35)', width: 1 }
+          },
+          opacity: config.backgroundBars.opacity ?? 0.35,
+          hovertemplate: '<b>Ano:</b> %{x}<br><b>' + (config.backgroundBars.name || 'Brasil') + ':</b> %{y}<extra></extra>',
+          yaxis: 'y2'
+        });
+      }
+
+      traces.push({
+        x,
+        y,
+        type: 'scatter',
+        mode: 'lines+markers',
+        line: { color, width: 4, shape: 'spline' },
+        marker: { color, size: 8, line: { color: 'white', width: 2 } },
+        hovertemplate: '<b>Ano:</b> %{x}<br><b>' + title + ':</b> %{y}<extra></extra>',
+        name: title
+      });
+
+      if (config.referenceLine && config.referenceLine.value !== undefined && config.referenceLine.value !== null) {
+        const years = x || [];
+        const minX = years.length ? years[0] : null;
+        const maxX = years.length ? years[years.length - 1] : null;
+        traces.push({
+          x: [minX, maxX],
+          y: [config.referenceLine.value, config.referenceLine.value],
+          type: 'scatter',
+          mode: 'lines',
+          name: config.referenceLine.name || 'Referência',
+          line: {
+            color: config.referenceLine.color || '#6b7280',
+            width: config.referenceLine.width || 2,
+            dash: config.referenceLine.dash || 'dash'
+          },
+          hovertemplate: '<b>' + (config.referenceLine.name || 'Referência') + '</b><br>Valor: %{y}<extra></extra>',
+          showlegend: false
+        });
+      }
+
+      const layout = JSON.parse(JSON.stringify(commonLayout));
+      layout.yaxis.title = yTitle;
+      layout.yaxis.tickformat = tickformat;
+      layout.margin = { t: 20, r: 20, b: 60, l: 60 };
+      layout.showlegend = false;
+
+      if (config.backgroundBars && Array.isArray(config.backgroundBars.values)) {
+        const values = config.backgroundBars.values;
+        const maxBar = Math.max(...values.map(v => Number(v) || 0));
+        layout.yaxis2 = {
+          overlaying: 'y',
+          side: 'right',
+          showgrid: false,
+          zeroline: false,
+          showline: false,
+          fixedrange: true,
+          tickfont: { size: 10, color: '#9ca3af' },
+          title: {
+            text: config.backgroundBars.axisTitle || config.backgroundBars.name || 'Brasil',
+            font: { size: 11, color: '#6b7280' }
+          },
+          range: [0, maxBar * 1.08]
+        };
+      }
+
+      Plotly.newPlot(divId, traces, layout, chartConfig);
     }
 
     function renderOverallCharts() {
       buildLineChart('overallFwciChart', dashboardData.overall.years, dashboardData.overall.fwci, colors.blue, 'FWCI', 'FWCI', '.2f');
-      buildLineChart('overallOutputChart', dashboardData.overall.years, dashboardData.overall.output, colors.green, 'Produção Científica', 'Publicações', '.0f');
+      buildLineChart('overallOutputChart', dashboardData.overall.years, dashboardData.overall.output, colors.green, 'Produção Científica', 'Publicações', '.0f', {
+        backgroundBars: {
+          values: dashboardData.overall.outputBrazil,
+          name: 'Brasil',
+          axisTitle: 'Brasil'
+        }
+      });
       buildLineChart('overallCppChart', dashboardData.overall.years, dashboardData.overall.cpp, colors.orange, 'Citações por Publicação', 'Citações / Pub.', '.1f');
-      // Novo gráfico: total citations
-      buildLineChart('overallCitationsChart', dashboardData.overall.years, dashboardData.overall.totalCitations, colors.red, 'Citações Totais', 'Citações', '.0f');
+      buildLineChart('overallCitationsChart', dashboardData.overall.years, dashboardData.overall.totalCitations, colors.red, 'Citações Totais', 'Citações', '.0f', {
+        backgroundBars: {
+          values: dashboardData.overall.totalCitationsBrazil,
+          name: 'Brasil',
+          axisTitle: 'Brasil'
+        }
+      });
     }
 
     let currentAreaMetric = 'Scholarly.Output', currentRankingMetric = 'Scholarly.Output', currentHeatMetric = 'Scholarly.Output';
