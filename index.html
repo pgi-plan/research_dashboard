@@ -396,24 +396,6 @@
       </div>
     </div>
 
-    <!-- 1. Heatmap (full row) -->
-    <div class="row mb-4">
-      <div class="col-12">
-        <div class="chart-container">
-          <h4 class="chart-title">Mapa de calor</h4>
-          <div class="chart-tabs mb-3" id="heatMetricTabs">
-            <button class="tab-btn active" onclick="changeHeatMetric('Scholarly.Output', this)">Produção
-              Científica</button>
-            <button class="tab-btn" onclick="changeHeatMetric('Citations', this)">Citações</button>
-            <button class="tab-btn" onclick="changeHeatMetric('Citations.per.Publication', this)">Citações /
-              Pub.</button>
-            <button class="tab-btn" onclick="changeHeatMetric('Field.weighted.Citation.Impact', this)">FWCI</button>
-          </div>
-          <div id="heatmapChart"></div>
-        </div>
-      </div>
-    </div>
-
     <!-- Gráfico de áreas empilhadas -->
     <div class="row mb-4">
       <div class="col-12">
@@ -427,10 +409,23 @@
               Pub.</button>
             <button class="tab-btn" onclick="changeStackedMetric('Field.weighted.Citation.Impact', this)">FWCI</button>
           </div>
+          <div class="filter-row mb-3">
+            <label for="othersCount" class="fw-semibold">Agrupar quantas áreas em “Outros”?</label>
+            <input
+              id="othersCount"
+              type="number"
+              class="filter-select"
+              min="1"
+              max="26"
+              value="15"
+              style="max-width: 160px;"
+              oninput="renderStackedArea(currentStackedMetric)"
+            />
+          </div>
           <div id="stackedAreaChart"></div>
           <div class="chart-notes">
             <i class="fas fa-chart-area me-1"></i>Participação percentual de cada área na métrica selecionada ao longo do
-            tempo, com as 10 menores áreas agrupadas em “Outros”.
+            tempo, com as N menores áreas agrupadas em “Outros”.
           </div>
         </div>
       </div>
@@ -443,11 +438,15 @@
         const subjects = dashboardData.subjects;
         const metricData = dashboardData.areaSeries[metric];
 
-        // Cria um array com os dados de cada área, no formato { name, y: array de valores por ano }
         const traces = [];
         const colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf', '#f4a261', '#e9c46a', '#2a9d8f', '#e76f51', '#d4a373', '#6c91b2', '#9c89b8', '#f0a3c2', '#b8b5e0', '#ffb3ba', '#c5e0b4', '#ffcc99', '#b5e3d5', '#f9c74f', '#f9844a', '#f94144', '#577590'];
 
+        const othersInput = document.getElementById('othersCount');
+        const othersCountRaw = othersInput ? parseInt(othersInput.value, 10) : 15;
+        const othersCount = Math.max(1, Math.min(subjects.length - 1, isNaN(othersCountRaw) ? 15 : othersCountRaw));
+
         const lastYearIdx = years.length - 1;
+
         const rankedSubjects = [...subjects]
           .map(subject => ({
             subject,
@@ -456,29 +455,29 @@
           }))
           .sort((a, b) => a.lastValue - b.lastValue);
 
-        const groupedSubjects = rankedSubjects.slice(0, 10);
-        const keptSubjects = rankedSubjects.slice(10);
+        const othersSubjects = rankedSubjects.slice(0, othersCount);
+        const keptSubjects = rankedSubjects.slice(othersCount);
 
-        // Coloca "Outros" como base da pilha e mantém as demais áreas acima dela
-        if (groupedSubjects.length) {
-          const othersValues = years.map((_, idx) => groupedSubjects.reduce((sum, item) => sum + (Number(item.values[idx]) || 0), 0));
-          traces.push({
-            x: years,
-            y: othersValues,
-            name: 'Outros',
-            type: 'scatter',
-            mode: 'lines',
-            fill: 'tonexty',
-            stackgroup: 'one',
-            groupnorm: 'percent',
-            line: {
-              width: 0.5,
-              color: '#6b7280'
-            },
-            hoverinfo: 'x+y+name',
-            hovertemplate: '<b>%{fullData.name}</b><br>Ano: %{x}<br>' + dashboardData.metricLabels[metric] + ': %{y:,.1f}%<extra></extra>'
-          });
-        }
+        const othersValues = years.map((_, idx) =>
+          othersSubjects.reduce((sum, item) => sum + (Number(item.values[idx]) || 0), 0)
+        );
+
+        traces.push({
+          x: years,
+          y: othersValues,
+          name: 'Outros',
+          type: 'scatter',
+          mode: 'lines',
+          fill: 'tonexty',
+          stackgroup: 'one',
+          groupnorm: 'percent',
+          line: {
+            width: 0.5,
+            color: '#6b7280'
+          },
+          hoverinfo: 'x+y+name',
+          hovertemplate: '<b>%{fullData.name}</b><br>Ano: %{x}<br>' + dashboardData.metricLabels[metric] + ': %{y:,.1f}%<extra></extra>'
+        });
 
         keptSubjects
           .sort((a, b) => a.lastValue - b.lastValue)
@@ -566,6 +565,26 @@
         }
       });
     </script>
+
+    
+
+<!-- 1. Heatmap (full row) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="chart-container">
+          <h4 class="chart-title">Mapa de calor</h4>
+          <div class="chart-tabs mb-3" id="heatMetricTabs">
+            <button class="tab-btn active" onclick="changeHeatMetric('Scholarly.Output', this)">Produção
+              Científica</button>
+            <button class="tab-btn" onclick="changeHeatMetric('Citations', this)">Citações</button>
+            <button class="tab-btn" onclick="changeHeatMetric('Citations.per.Publication', this)">Citações /
+              Pub.</button>
+            <button class="tab-btn" onclick="changeHeatMetric('Field.weighted.Citation.Impact', this)">FWCI</button>
+          </div>
+          <div id="heatmapChart"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- 2. Evolução das 3 principais áreas -->
     <div class="row mb-4">
@@ -819,14 +838,15 @@
           x,
           y: config.backgroundBars.values,
           type: 'bar',
-          name: config.backgroundBars.name || 'Brasil',
+          name: config.backgroundBars.name || 'Brasil (barras)',
           marker: {
             color: config.backgroundBars.color || 'rgba(107, 114, 128, 0.25)',
             line: { color: config.backgroundBars.borderColor || 'rgba(107, 114, 128, 0.35)', width: 1 }
           },
-          opacity: config.backgroundBars.opacity ?? 0.35,
-          hovertemplate: '<b>Ano:</b> %{x}<br><b>' + (config.backgroundBars.name || 'Brasil') + ':</b> %{y}<extra></extra>',
-          yaxis: 'y2'
+          opacity: config.backgroundBars.opacity ?? 0.28,
+          hovertemplate: '<b>Ano:</b> %{x}<br><b>' + (config.backgroundBars.name || 'Brasil (barras)') + ':</b> %{y}<extra></extra>',
+          yaxis: 'y2',
+          showlegend: true
         });
       }
 
@@ -837,39 +857,20 @@
         mode: 'lines+markers',
         line: { color, width: 4, shape: 'spline' },
         marker: { color, size: 8, line: { color: 'white', width: 2 } },
-        hovertemplate: '<b>Ano:</b> %{x}<br><b>' + title + ':</b> %{y}<extra></extra>',
-        name: title
+        hovertemplate: '<b>Ano:</b> %{x}<br><b>' + (config.lineName || title) + ':</b> %{y}<extra></extra>',
+        name: config.lineName || title,
+        showlegend: !!config.backgroundBars
       });
-
-      if (config.referenceLine && config.referenceLine.value !== undefined && config.referenceLine.value !== null) {
-        const years = x || [];
-        const minX = years.length ? years[0] : null;
-        const maxX = years.length ? years[years.length - 1] : null;
-        traces.push({
-          x: [minX, maxX],
-          y: [config.referenceLine.value, config.referenceLine.value],
-          type: 'scatter',
-          mode: 'lines',
-          name: config.referenceLine.name || 'Referência',
-          line: {
-            color: config.referenceLine.color || '#6b7280',
-            width: config.referenceLine.width || 2,
-            dash: config.referenceLine.dash || 'dash'
-          },
-          hovertemplate: '<b>' + (config.referenceLine.name || 'Referência') + '</b><br>Valor: %{y}<extra></extra>',
-          showlegend: false
-        });
-      }
 
       const layout = JSON.parse(JSON.stringify(commonLayout));
       layout.yaxis.title = yTitle;
       layout.yaxis.tickformat = tickformat;
       layout.margin = { t: 20, r: 35, b: 60, l: 60 };
-      layout.showlegend = false;
+      layout.showlegend = !!config.backgroundBars;
 
       if (config.backgroundBars && Array.isArray(config.backgroundBars.values)) {
-        const values = config.backgroundBars.values;
-        const maxBar = Math.max(...values.map(v => Number(v) || 0));
+        const values = config.backgroundBars.values.map(v => Number(v) || 0);
+        const maxBar = Math.max(...values, 0);
         layout.yaxis2 = {
           overlaying: 'y',
           side: 'right',
@@ -879,7 +880,7 @@
           fixedrange: true,
           tickfont: { size: 10, color: '#9ca3af' },
           title: {
-            text: config.backgroundBars.axisTitle || config.backgroundBars.name || 'Brasil',
+            text: config.backgroundBars.axisTitle || 'Brasil',
             font: { size: 11, color: '#6b7280' }
           },
           range: [0, maxBar * 1.08]
@@ -890,22 +891,63 @@
     }
 
     function renderOverallCharts() {
-      buildLineChart('overallFwciChart', dashboardData.overall.years, dashboardData.overall.fwci, colors.blue, 'FWCI', 'FWCI', '.2f');
-      buildLineChart('overallOutputChart', dashboardData.overall.years, dashboardData.overall.output, colors.green, 'Produção Científica', 'Publicações', '.0f', {
-        backgroundBars: {
-          values: dashboardData.overall.outputBrazil,
-          name: 'Brasil',
-          axisTitle: 'Brasil'
+      buildLineChart(
+        'overallFwciChart',
+        dashboardData.overall.years,
+        dashboardData.overall.fwci,
+        colors.blue,
+        'FWCI',
+        'FWCI',
+        '.2f'
+      );
+
+      buildLineChart(
+        'overallOutputChart',
+        dashboardData.overall.years,
+        dashboardData.overall.output,
+        colors.green,
+        'Produção Científica',
+        'Publicações',
+        '.0f',
+        {
+          lineName: 'UFF',
+          backgroundBars: {
+            values: dashboardData.overall.outputBrazil,
+            name: 'Brasil (barras)',
+            axisTitle: 'Brasil',
+            opacity: 0.28
+          }
         }
-      });
-      buildLineChart('overallCppChart', dashboardData.overall.years, dashboardData.overall.cpp, colors.orange, 'Citações por Publicação', 'Citações / Pub.', '.1f');
-      buildLineChart('overallCitationsChart', dashboardData.overall.years, dashboardData.overall.totalCitations, colors.red, 'Citações Totais', 'Citações', '.0f', {
-        backgroundBars: {
-          values: dashboardData.overall.totalCitationsBrazil,
-          name: 'Brasil',
-          axisTitle: 'Brasil'
+      );
+
+      buildLineChart(
+        'overallCppChart',
+        dashboardData.overall.years,
+        dashboardData.overall.cpp,
+        colors.orange,
+        'Citações por Publicação',
+        'Citações / Pub.',
+        '.1f'
+      );
+
+      buildLineChart(
+        'overallCitationsChart',
+        dashboardData.overall.years,
+        dashboardData.overall.totalCitations,
+        colors.red,
+        'Citações Totais',
+        'Citações',
+        '.0f',
+        {
+          lineName: 'UFF',
+          backgroundBars: {
+            values: dashboardData.overall.totalCitationsBrazil,
+            name: 'Brasil (barras)',
+            axisTitle: 'Brasil',
+            opacity: 0.28
+          }
         }
-      });
+      );
     }
 
     let currentAreaMetric = 'Scholarly.Output', currentRankingMetric = 'Scholarly.Output', currentHeatMetric = 'Scholarly.Output';
