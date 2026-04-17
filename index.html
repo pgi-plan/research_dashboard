@@ -1197,54 +1197,116 @@
       Plotly.newPlot('top3TrendChart', traces, layout, chartConfig);
     }
 
-    function renderScatterChart() {
-      const latestIndex = dashboardData.years.length - 1;
-      const points = [];
-      for (const subject of dashboardData.subjects) {
-        const output = dashboardData.areaSeries['Scholarly.Output'][subject]?.[latestIndex];
-        const fwci = dashboardData.areaSeries['Field.weighted.Citation.Impact'][subject]?.[latestIndex];
-        if (output !== undefined && output !== null && fwci !== undefined && fwci !== null) {
-          points.push({
-            name: subject,
-            output: output,
-            fwci: fwci,
-            label: abbreviate(subject)
-          });
-        }
+  function renderScatterChart() {
+    const latestIndex = dashboardData.years.length - 1;
+    let points = [];
+
+    for (const subject of dashboardData.subjects) {
+      const output = dashboardData.areaSeries['Scholarly.Output'][subject]?.[latestIndex];
+      const fwci = dashboardData.areaSeries['Field.weighted.Citation.Impact'][subject]?.[latestIndex];
+
+      if (output != null && fwci != null) {
+        points.push({
+          name: subject,
+          output,
+          fwci,
+          label: abbreviate(subject)
+        });
       }
-      const trace = {
-        x: points.map(p => p.output),
-        y: points.map(p => p.fwci),
-        text: points.map(p => p.label),
-        textposition: 'top center',
-        textfont: { size: 8, color: '#1f2937' },
-        mode: 'markers+text',
-        marker: {
-          size: 12,
-          color: points.map(p => p.fwci),
-          colorscale: 'Viridis',
-          showscale: true,
-          colorbar: { title: 'FWCI' },
-          line: { width: 1, color: 'white' }
-        },
-        hovertemplate: '<b>%{text}</b><br>Produção: %{x}<br>FWCI: %{y}<extra></extra>'
-      };
-      const layout = {
-        paper_bgcolor: 'rgba(0,0,0,0)',
-        plot_bgcolor: 'rgba(0,0,0,0)',
-        font: { family: 'Inter, sans-serif' },
-        margin: { t: 40, r: 80, b: 60, l: 70 },
-        xaxis: { title: 'Produção Científica (publicações)', fixedrange: true, gridcolor: 'rgba(0,0,0,0.04)' },
-        yaxis: { title: 'FWCI (Field-Weighted Citation Impact)', fixedrange: true, gridcolor: 'rgba(0,0,0,0.04)', zeroline: true, zerolinecolor: '#ccc' },
-        hovermode: 'closest',
-        showlegend: false,
-        shapes: [{
-          type: 'line', xref: 'paper', yref: 'y', x0: 0, x1: 1, y0: 1, y1: 1,
-          line: { color: 'red', width: 1, dash: 'dash' }
-        }]
-      };
-      Plotly.newPlot('scatterChart', [trace], layout, chartConfig);
     }
+
+    // 🔥 Ordena por relevância (FWCI ou output)
+    const topN = 10;
+    const topPoints = [...points]
+      .sort((a, b) => b.fwci - a.fwci)
+      .slice(0, topN);
+
+    const trace = {
+      x: points.map(p => p.output),
+      y: points.map(p => p.fwci),
+      mode: 'markers',
+      marker: {
+        size: 11,
+        color: points.map(p => p.fwci),
+
+        // 🎨 nova paleta
+        colorscale: 'Turbo',
+
+        // 🔥 deixa mais equilibrado visualmente
+        cmin: Math.min(...points.map(p => p.fwci)),
+        cmax: Math.max(...points.map(p => p.fwci)),
+
+        showscale: true,
+        colorbar: {
+          title: 'FWCI',
+          thickness: 12,
+          outlinewidth: 0,
+          tickfont: { size: 10 }
+        },
+
+        line: {
+          width: 0.7,
+          color: 'white'
+        },
+
+        opacity: 0.85
+      },
+      hovertemplate:
+        '<b>%{customdata}</b><br>Produção: %{x}<br>FWCI: %{y}<extra></extra>',
+      customdata: points.map(p => p.name)
+    };
+
+    // 🔥 Labels como annotations (sem sobreposição direta)
+    const annotations = topPoints.map(p => ({
+      x: p.output,
+      y: p.fwci,
+      text: p.label,
+      showarrow: false,
+      font: { size: 10, color: '#111827' },
+      xanchor: 'left',
+      yanchor: 'bottom',
+      xshift: 4,
+      yshift: 4
+    }));
+
+    const layout = {
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      font: { family: 'Inter, sans-serif' },
+      margin: { t: 40, r: 80, b: 60, l: 70 },
+
+      xaxis: {
+        title: 'Produção Científica',
+        gridcolor: 'rgba(0,0,0,0.04)',
+        zeroline: false
+      },
+
+      yaxis: {
+        title: 'FWCI',
+        gridcolor: 'rgba(0,0,0,0.04)',
+        zeroline: true,
+        zerolinecolor: '#d1d5db'
+      },
+
+      annotations,
+
+      shapes: [{
+        type: 'line',
+        xref: 'paper',
+        yref: 'y',
+        x0: 0,
+        x1: 1,
+        y0: 1,
+        y1: 1,
+        line: { color: '#ef4444', width: 1, dash: 'dot' }
+      }],
+
+      hovermode: 'closest',
+      showlegend: false
+    };
+
+    Plotly.newPlot('scatterChart', [trace], layout, chartConfig);
+  }
 
     function changeAreaMetric(metric, btn) { currentAreaMetric = metric; updateTabs('areaMetricTabs', btn); renderAreaChart(); }
     function changeRankingMetric(metric, btn) { currentRankingMetric = metric; updateTabs('rankingMetricTabs', btn); renderRankingChart(); }
