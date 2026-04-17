@@ -292,6 +292,58 @@
       padding-top: 20px;
       border-top: 1px solid #e5e7eb;
     }
+
+    /* ===== Heatmap estilo da imagem ===== */
+    .heatmap-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .heatmap-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .heatmap-tabs {
+      background: transparent !important;
+      padding: 0 !important;
+      margin-bottom: 0 !important;
+      gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .heatmap-tabs .tab-btn {
+      flex: 0 0 auto;
+      min-width: auto;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: transparent;
+      color: #64748b;
+      font-size: 0.78rem;
+      font-weight: 500;
+      box-shadow: none;
+    }
+
+    .heatmap-tabs .tab-btn:hover {
+      background: #eef2ff;
+      color: #334155;
+    }
+
+    .heatmap-tabs .tab-btn.active {
+      background: #5b5ef7;
+      color: #ffffff;
+      box-shadow: none;
+    }
+
+    #heatmapChart {
+      min-height: 620px;
+    }
   </style>
 </head>
 
@@ -566,9 +618,9 @@
       });
     </script>
 
-    
 
-<!-- 1. Heatmap (full row) -->
+
+<!-- 1. Heatmap (full row)
     <div class="row mb-4">
       <div class="col-12">
         <div class="chart-container">
@@ -580,6 +632,26 @@
             <button class="tab-btn" onclick="changeHeatMetric('Citations.per.Publication', this)">Citações /
               Pub.</button>
             <button class="tab-btn" onclick="changeHeatMetric('Field.weighted.Citation.Impact', this)">FWCI</button>
+          </div>
+          <div id="heatmapChart"></div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- 1. Heatmap (full row) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="chart-container">
+          <div class="heatmap-header">
+            <h4 class="heatmap-title">Mapa de Calor</h4>
+            <div class="chart-tabs heatmap-tabs" id="heatMetricTabs">
+              <button class="tab-btn active" onclick="changeHeatMetric('Scholarly.Output', this)">Produção
+                Científica</button>
+              <button class="tab-btn" onclick="changeHeatMetric('Citations', this)">Citações</button>
+              <button class="tab-btn" onclick="changeHeatMetric('Citations.per.Publication', this)">Citações por
+                Publicação</button>
+              <button class="tab-btn" onclick="changeHeatMetric('Field.weighted.Citation.Impact', this)">FWCI</button>
+            </div>
           </div>
           <div id="heatmapChart"></div>
         </div>
@@ -913,6 +985,7 @@
           lineName: 'UFF',
           backgroundBars: {
             values: dashboardData.overall.outputBrazil,
+            color: colors.green,
             name: 'Brasil (barras)',
             axisTitle: 'Brasil',
             opacity: 0.28
@@ -942,6 +1015,7 @@
           lineName: 'UFF',
           backgroundBars: {
             values: dashboardData.overall.totalCitationsBrazil,
+            color: colors.red,
             name: 'Brasil (barras)',
             axisTitle: 'Brasil',
             opacity: 0.28
@@ -981,14 +1055,135 @@
       latestValues.sort((a, b) => b.value - a.value);
       return latestValues.map(item => item.name);
     }
+    // function renderHeatmap() {
+    //   const orderedSubjects = getOrderedSubjects(currentHeatMetric);
+    //   const z = orderedSubjects.map(s => dashboardData.areaSeries[currentHeatMetric][s]);
+    //   const yLabels = orderedSubjects.map(s => abbreviate(s));
+    //   const trace = { z: z, x: dashboardData.years, y: yLabels, type: 'heatmap', colorscale: 'YlOrRd', hoverongaps: false, hovertemplate: '<b>Área:</b> %{y}<br><b>Ano:</b> %{x}<br><b>' + dashboardData.metricLabels[currentHeatMetric] + ':</b> %{z}<extra></extra>' };
+    //   const layout = { paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)', font: { family: 'Inter, sans-serif' }, margin: { t: 20, r: 20, b: 80, l: 150 }, xaxis: { fixedrange: true, title: 'Ano', tickvals: dashboardData.years, tickformat: 'd', tickangle: -45 }, yaxis: { fixedrange: true, autorange: 'reversed', tickfont: { size: 8 } } };
+    //   Plotly.newPlot('heatmapChart', [trace], layout, chartConfig);
+    // }
     function renderHeatmap() {
-      const orderedSubjects = getOrderedSubjects(currentHeatMetric);
-      const z = orderedSubjects.map(s => dashboardData.areaSeries[currentHeatMetric][s]);
-      const yLabels = orderedSubjects.map(s => abbreviate(s));
-      const trace = { z: z, x: dashboardData.years, y: yLabels, type: 'heatmap', colorscale: 'YlOrRd', hoverongaps: false, hovertemplate: '<b>Área:</b> %{y}<br><b>Ano:</b> %{x}<br><b>' + dashboardData.metricLabels[currentHeatMetric] + ':</b> %{z}<extra></extra>' };
-      const layout = { paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)', font: { family: 'Inter, sans-serif' }, margin: { t: 20, r: 20, b: 80, l: 150 }, xaxis: { fixedrange: true, title: 'Ano', tickvals: dashboardData.years, tickformat: 'd', tickangle: -45 }, yaxis: { fixedrange: true, autorange: 'reversed', tickfont: { size: 8 } } };
-      Plotly.newPlot('heatmapChart', [trace], layout, chartConfig);
-    }
+        const orderedSubjects = getOrderedSubjects(currentHeatMetric);
+        const z = orderedSubjects.map(s => dashboardData.areaSeries[currentHeatMetric][s]);
+        const yLabels = orderedSubjects.map(s => abbreviate(s));
+
+        const values = z.flat().filter(v => v !== null && v !== undefined && !Number.isNaN(v));
+        const zmin = values.length ? Math.min(...values) : 0;
+        const zmax = values.length ? Math.max(...values) : 1;
+
+        const tickYears = dashboardData.years.filter((_, idx) => idx % 3 === 0);
+
+        const trace = {
+          z: z,
+          x: dashboardData.years,
+          y: yLabels,
+          type: 'heatmap',
+          hoverongaps: false,
+          zmin: zmin,
+          zmax: zmax,
+          colorscale: [
+            [0.00, '#00c853'],
+            [0.25, '#7ad83c'],
+            [0.50, '#cddc39'],
+            [0.68, '#ffb300'],
+            [0.82, '#ff6f00'],
+            [1.00, '#ff1f1f']
+          ],
+          xgap: 1,
+          ygap: 1,
+          hovertemplate:
+            '<b>Área:</b> %{y}<br>' +
+            '<b>Ano:</b> %{x}<br>' +
+            '<b>' + dashboardData.metricLabels[currentHeatMetric] + ':</b> %{z}<extra></extra>',
+          colorbar: {
+            orientation: 'h',
+            x: 0.5,
+            xanchor: 'center',
+            y: -0.22,
+            len: 0.96,
+            thickness: 12,
+            outlinewidth: 0,
+            tickmode: 'array',
+            tickvals: [zmin, zmax],
+            ticktext: ['Menor', 'Maior'],
+            tickfont: { size: 10, color: '#6b7280' }
+          }
+        };
+
+        const layout = {
+          paper_bgcolor: 'rgba(0,0,0,0)',
+          plot_bgcolor: '#ffffff',
+          font: { family: 'Inter, sans-serif', color: '#334155' },
+          margin: { t: 12, r: 20, b: 90, l: 105 },
+          xaxis: {
+            fixedrange: true,
+            side: 'top',
+            tickmode: 'array',
+            tickvals: tickYears,
+            ticktext: tickYears.map(String),
+            tickfont: { size: 12, color: '#94a3b8' },
+            showgrid: false,
+            zeroline: false,
+            showline: false,
+            ticks: ''
+          },
+          yaxis: {
+            fixedrange: true,
+            autorange: 'reversed',
+            tickfont: { size: 10, color: '#808080' },
+            showgrid: false,
+            zeroline: false,
+            showline: false,
+            automargin: true,
+            ticks: ''
+          },
+          hovermode: 'closest',
+          showlegend: false,
+          shapes: []
+        };
+
+        Plotly.newPlot('heatmapChart', [trace], layout, chartConfig).then((gd) => {
+          let lastHoverKey = null;
+
+          gd.on('plotly_hover', function (ev) {
+            if (!ev || !ev.points || !ev.points.length) return;
+
+            const p = ev.points[0];
+            const xIdx = dashboardData.years.indexOf(p.x);
+            const yIdx = yLabels.indexOf(p.y);
+
+            if (xIdx === -1 || yIdx === -1) return;
+
+            const key = `${xIdx}-${yIdx}`;
+            if (key === lastHoverKey) return;
+            lastHoverKey = key;
+
+            const shape = {
+              type: 'rect',
+              xref: 'x',
+              yref: 'y',
+              x0: dashboardData.years[xIdx] - 0.5,
+              x1: dashboardData.years[xIdx] + 0.5,
+              y0: yLabels[yIdx],
+              y1: yLabels[yIdx],
+              line: {
+                color: 'rgba(255,255,255,0.95)',
+                width: 2
+              },
+              fillcolor: 'rgba(255,255,255,0.12)'
+            };
+
+            Plotly.relayout(gd, { shapes: [shape] });
+          });
+
+          gd.on('plotly_unhover', function () {
+            lastHoverKey = null;
+            Plotly.relayout(gd, { shapes: [] });
+          });
+        });
+      }
+
     function renderTop3Trend() {
       const latestOutputs = dashboardData.subjects.map(s => ({ area: s, value: dashboardData.areaSeries['Scholarly.Output'][s]?.[dashboardData.areaSeries['Scholarly.Output'][s].length - 1] || 0 }));
       const top3 = latestOutputs.sort((a, b) => b.value - a.value).slice(0, 3).map(item => item.area);
